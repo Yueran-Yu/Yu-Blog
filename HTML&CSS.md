@@ -6,12 +6,12 @@
 4. Select 'individual line with abbreviation'
 5. enter  'ul>li*'
 
-#### MBP delete
-* *option + delete:*
+#### MBP delete Shortcut
+* **option + delete:**
   * delete one sentence or a word before the cursor
-* *command + delete:*
+* **command + delete:**
   * delete a whole line sentence
-* *fn + delete:*
+* **fn + delete:**
   * delete the word after the cursor
 
 
@@ -39,20 +39,20 @@
 * cmd + option + J
 
 
-# Systematic Learning
-## What you need to get the Hang of when you learn a new language?
+## Systematic Learning
+### What you need to get the Hang of when you learn a new language?
 1. grammar - know how to code
 2. debug - know where is wrong
 3. Look up reference materials - copy code
 4. Who is the standard maker?
 
-## How to learn?
+### How to learn?
 1. Copy - Copy document, and copy teacher
 2. Run - running the code in your self compiler
 3. Modify - infuse your own thought and run again
 
 
-## CSS Grammar
+### CSS Grammar
 * *@charset "UTF-8"*
 * *@import url(2.css);*
 * *@media (min-width: 100px) and (max-width: 200px){ ... }*
@@ -66,14 +66,14 @@ Attention:
   5. UTF-8 is a compromise character encoding that can be as compact as ASCII (if the file is just plain English text) but can also contain any unicode characters (with some increase in file size).
 ```
 
-## Border DEBUG
+### Border DEBUG
 
-### Where can you find the material of CSS?
+#### Where can you find the material of CSS?
 * Google keywords + MDN
 * CSS Tricks
 * 张鑫旭博客
 
-### Where Can I find the practice material?
+#### Where Can I find the practice material?
 
 
 

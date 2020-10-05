@@ -1,3 +1,3 @@
 # Technology Learning List
-* [Blog1](blog1.md)
-* [Blog2](blog2.md)
+* [HTML&CSS](HTML&CSS.md)
+* [The Usage of 'a' Tag](Usage_OF_A_Tag.md)

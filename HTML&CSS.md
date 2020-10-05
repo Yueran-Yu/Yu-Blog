@@ -1,0 +1,80 @@
+# HTML Practice
+### shortcut to create the ul list
+1. select  many lines
+2. in the vscode，press 'command +shift + p' together
+3. then search 'emmet wrap'
+4. Select 'individual line with abbreviation'
+5. enter  'ul>li*'
+
+#### MBP delete
+* *option + delete:*
+  * delete one sentence or a word before the cursor
+* *command + delete:*
+  * delete a whole line sentence
+* *fn + delete:*
+  * delete the word after the cursor
+
+
+### When add Photos
+* Don't transform the pictures, can't set the width and height at the same time.
+* You can use the online tool to reshape the proportion of the pictures
+* If the size of the picture is too big( over 300kb), compress the picture to smaller size.
+
+
+### How to make the webpage compatible with the mobile phone.
+* add 'meta:vp' (tab) and 'img max-width'
+
+### Use WIFI test the webpage in mobile phone
+
+#### Step
+1. keep the mobile and the laptop within the same WIFI
+2. you can use the IP and port to visit the laptop directly
+3. Which IP address you can use? Try through all the IP addresses the http-server give to you.
+
+
+### ⭐️ Tips: when search in Chrome
+* For example: search keywords =>"chrome remote debug -csdn",  the "-csdn" means  remove all the information source from the CSDN website.
+
+### ⭐️ Open the 'Inspect'
+* cmd + option + J
+
+
+# Systematic Learning
+## What you need to get the Hang of when you learn a new language?
+1. grammar - know how to code
+2. debug - know where is wrong
+3. Look up reference materials - copy code
+4. Who is the standard maker?
+
+## How to learn?
+1. Copy - Copy document, and copy teacher
+2. Run - running the code in your self compiler
+3. Modify - infuse your own thought and run again
+
+
+## CSS Grammar
+* *@charset "UTF-8"*
+* *@import url(2.css);*
+* *@media (min-width: 100px) and (max-width: 200px){ ... }*
+
+```
+Attention:
+  1. @charset must in the first line
+  2. the first two grammars must end with semicolon
+  3. @media is a unique block of knowledge
+  4. charset means  "character sets"
+  5. UTF-8 is a compromise character encoding that can be as compact as ASCII (if the file is just plain English text) but can also contain any unicode characters (with some increase in file size).
+```
+
+## Border DEBUG
+
+### Where can you find the material of CSS?
+* Google keywords + MDN
+* CSS Tricks
+* 张鑫旭博客
+
+### Where Can I find the practice material?
+
+
+
+

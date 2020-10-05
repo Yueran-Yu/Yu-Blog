@@ -97,8 +97,8 @@
 >   - the width of inline element is the sum of all elements inside the inline element, can't use width
 >   - block will default calculate the width, can assign value to width
 >   - inline-block combine the merits of inline and block, can assign value to width
->   - shortcut to create multiple span => span.id{The number is} * 8
-> ***IMPORTANT!!! Never give a div element "width=100%;"***
+>   - shortcut to create multiple span => span.id{The number is} *
+>   - ***IMPORTANT!!! Never give a div element "width=100%;"***
 > - Height
 >   - The height of inline can be decided by the line-height
 >   - line-height can be inherited by the inside inline element

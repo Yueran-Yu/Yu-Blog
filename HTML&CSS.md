@@ -102,6 +102,26 @@
 > - Height
 >   - The height of inline can be decided by the line-height
 >   - line-height can be inherited by the inside inline element
+>   - 内联元素的文字如果在滚动条所在的框里，那么框会显示文字的所有内容，不存在需要横向拉动滚动条才能看见剩余的文字情况。
 
+###  Overflow
+* When content more than a container area, it will overflow
+* overflow: auto - based one the content to display the scroll bar or not
+* overflow: scroll - always display scroll bar
+* overflow: hidden - hidden the overflow part
+* overflow: visible - show all the content even it is out of the box
+
+### BOX Model
+![Box Model](imgs/box.png)
+> - Content-Box
+>    - Content is the yardstick of a border
+>    - content-box width = content width
+>
+> - Border-Box
+>    - Border is the yardstick of a border
+>    - border-box width = content width + padding + border
+>
+> Which one is better to use?
+>  - Border-box: including padding, border width together
 
 

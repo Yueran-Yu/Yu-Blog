@@ -57,24 +57,51 @@
 * *@import url(2.css);*
 * *@media (min-width: 100px) and (max-width: 200px){ ... }*
 
-```
-Attention:
-  1. @charset must in the first line
-  2. the first two grammars must end with semicolon
-  3. @media is a unique block of knowledge
-  4. charset means  "character sets"
-  5. UTF-8 is a compromise character encoding that can be as compact as ASCII (if the file is just plain English text) but can also contain any unicode characters (with some increase in file size).
-```
+
+> Attention:
+> 1. @charset must in the first line
+> 2. the first two grammars must end with semicolon
+> 3. @media is a unique block of knowledge
+> 4. charset means  "character sets"
+> 5. UTF-8 is a compromise character encoding that can be as compact as ASCII (if the file is just plain English text) but can also contain any unicode characters (with some increase in file size).
+
 
 ### Border DEBUG
 
 #### Where can you find the material of CSS?
-* Google keywords + MDN
-* CSS Tricks
-* 张鑫旭博客
+> * Google keywords + MDN
+> * CSS Tricks
+> * 张鑫旭博客
 
-#### Where Can I find the practice material?
+### Where Can I find the practice material?
+* ***PSD***
+> - Freepik, search PSD => search "web"
+> - 365PSD UI set
+* ***Effective Pictures***(NOT provide download)
+> - dribbble.com: top designer community => search "web"
+> - Imitate by eye
+* ***E-Commerce Website***
+> - directly imitate
 
+***Important!!! DON'T OBSESSED WITH IMITATION!!!***
+> Only imitate no more than two PC website, phone website, UI set. Useless to do more imitation.
+
+### Normal Flow
+> - Flow Direction
+>   - inline element direct from left to right, it will change line until to the rightmost.
+>   - block element direct from up to down, each block belongs to a line
+>   - inline-block direct from left to right, but it will never separate itself into two lines if it's at the line end.
+>
+> ***IMPORTANT!!! Don't put a block element inside a inline element!!!***
+> - Width
+>   - the width of inline element is the sum of all elements inside the inline element, can't use width
+>   - block will default calculate the width, can assign value to width
+>   - inline-block combine the merits of inline and block, can assign value to width
+>   - shortcut to create multiple span => span.id{The number is} * 8
+> ***IMPORTANT!!! Never give a div element "width=100%;"***
+> - Height
+>   - The height of inline can be decided by the line-height
+>   - line-height can be inherited by the inside inline element
 
 
 

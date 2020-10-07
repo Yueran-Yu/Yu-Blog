@@ -1,3 +1,4 @@
+#### ★ You can Try To Find More Practice Materials Online~~~ For Example: Flexbox Froggy
 ## Layout
 1. The fixed width: the width always is 960/ 1000 / 1024 px
 2. Not Fixed Width: mainly depends on normal flow layout
@@ -19,3 +20,6 @@
 * just-content:center / space-between
 * align-items:center
 * (These are basic use in work environment)
+
+#### The regular sketch tools
+![Sketch Tools](imgs/sketch_tools.png)

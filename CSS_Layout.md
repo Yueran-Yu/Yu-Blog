@@ -7,7 +7,7 @@
      * Which means the width fix in the PC, but not fix in the mobile phone
      * In other words, mixed layout
 
-<img src="imgs/CSS_Deploy.png" width="200" alt="CSS Layout Flow Chart">
+<img src="imgs/CSS_Deploy.png" width="500" alt="CSS Layout Flow Chart">
 
 #### Float
 * Add  ***float:left*** and ***width*** in the children elements
@@ -22,7 +22,7 @@
 * (These are basic use in work environment)
 
 #### Regular sketch tools
-<img src="imgs/sketch_tools.png" width="200" alt="Sketch Tools">
+<img src="imgs/sketch_tools.png" width="500" alt="Sketch Tools">
 
 
 
@@ -33,7 +33,7 @@
 ```
 
 ### One picture shows the div layout
-<img src="imgs/div_layout.png" width="200" alt="DIV Layout">
+<img src="imgs/div_layout.png" width="500" alt="DIV Layout">
 
 
 ### z-index

@@ -9,11 +9,11 @@
 
 <img src="imgs/CSS_Deploy.png" width="500" alt="CSS Layout Flow Chart">
 
-#### Float
+## Float
 * Add  ***float:left*** and ***width*** in the children elements
 * Add ***.clearfix*** in the parent element
 
-#### Important To Remember - Flex
+## Important To Remember - Flex
 * display:flex;
 * flex-direction:row/column
 * flex-wrap: wrap
@@ -23,7 +23,6 @@
 
 #### Regular sketch tools
 <img src="imgs/sketch_tools.png" width="500" alt="Sketch Tools">
-
 
 
 ##  **Grid**
@@ -36,7 +35,7 @@
 <img src="imgs/div_layout.png" width="500" alt="DIV Layout">
 
 
-### z-index
+## z-index
    The z-index CSS property of a positioned element and its descendants or flex items. Overlapping elements with a larger z-index cover those with a smaller one.
 
    For a positioned box(that is, one with any position other than static), the z-index property specifies:
@@ -48,7 +47,7 @@
 #### Shortcut to call 'Console'
 * In any tab, press  ESC
 
-### The Process of the Browser Rendering
+## The Process of the Browser Rendering
 ***Step:***
 1. According to the HTML to construct the HTML Tree(DOM)
 2. According to the CSS construct the CSS Tree
@@ -58,7 +57,7 @@
 6. Finally compose all the parts together
 
 
-### Rendering Performance (Cramming)
+## Rendering Performance (Cramming)
 1. Optimizing Javascript Execution
     - Avoid setTimeout or ***setInterval*** for visual updates; always use ***requestAnimationFrame*** instead.
     - Move long-running Javascript off the main thread to Web Workers.

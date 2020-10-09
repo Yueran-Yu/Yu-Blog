@@ -58,15 +58,17 @@
 
 
 ## Rendering Performance (Cramming)
-1. Optimizing Javascript Execution
+ 1. **Optimizing Javascript Execution**
     - Avoid setTimeout or ***setInterval*** for visual updates; always use ***requestAnimationFrame*** instead.
     - Move long-running Javascript off the main thread to Web Workers.
     - Use micro-tasks to make DOM changes over several frames.
     - Use Chrome DevTools' Timeline and Javascript Profiler to assess the impact of Javascript.
-2. Reduce the Scope and Complexity of Style Calculations
+
+2. **Reduce the Scope and Complexity of Style Calculations**
     - Reduce the complexity of your selectors; use a class-centric methodology like BEM.
     - Reduce the number of elements on which style calculation must be calculated.
-3. Avoid Large, Complex Layouts and Layout Thrashing
+
+3. **Avoid Large, Complex Layouts and Layout Thrashing**
     - Similarly to style calculations, the immediate concerns for layout cost are:
       - The number of elements that require layout.
       - The complexity of those layouts.
@@ -74,16 +76,50 @@
     - The number of DOM elements will affect performance; you should avoid triggering layout wherever possible.
     - Assess layout model performance; new Flexbox is typically faster than older Flexbox or float-based layout models.
     - Avoid forced synchronous layouts and layout thrashing; read style values then make style changes.
-4. Simplify Paint Complexity and Reduce Paint Areas
+
+4. **Simplify Paint Complexity and Reduce Paint Areas**
     - Changing any property apart from transforms or opacity always triggers paint.
     - Paint is often the most expensive part of the pixel pipeline; avoid it where you can.
     - Reduce paint areas through layer promotion and orchestration of animations.
     - Use the Chrome DevTools paint profiler to assess paint complexity and cost; reduce where you can.
-5. Stick to Compositor-Only Properties and Manage Layer Count
+
+5. **Stick to Compositor-Only Properties and Manage Layer Count**
     - Stick to transform and opacity changes for your animations.
     - Promote moving elements with ***will-change*** or ***translateZ***.
     - Avoid overusing promotion rules; layers require memory and management.
-6. Debounce Your Input Handlers
+
+6. **Debounce Your Input Handlers**
     - Avoid long-running input handlers; they can block scrolling.
     - Do not make style changes in input handlers.
     - Debounce your handlers; store event values and deal with style changes in the next requestAnimationFrame callback.
+
+
+### How to Debug the ***[Hover]*** Effect
+- Open DevTools
+- In the Style Tab, find out [:hov] in the top right conner and click it
+- Check [:hover]
+- Find out ```#demo:hover{transform: translateX(50px)}```
+- Press **UP** or **DOWN** key to see the demo box moving 1px each time consecutively
+- Press **Shift** + **UP** or **DOWN** , the demo box will move 10px each time consecutively
+
+### How to Use Transform to Center the Box (Cramming)
+```css
+.wrapper1
+{
+  border: 5px solid black;
+  position: relative;
+  height: 600px;
+  }
+
+#demo1
+{
+width:200px;
+height:200px;
+border:1px solid green;
+position: absolute;
+left:50%;
+top:50%;
+transform: translateX(-50% -50%);
+}
+```
+

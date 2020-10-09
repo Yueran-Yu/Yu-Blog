@@ -7,7 +7,7 @@
      * Which means the width fix in the PC, but not fix in the mobile phone
      * In other words, mixed layout
 
-![CSS Layout Flow Chart](imgs/CSS_Deploy.png)
+<img src="imgs/CSS_Deploy.png" width="500" alt="CSS Layout Flow Chart">
 
 #### Float
 * Add  ***float:left*** and ***width*** in the children elements
@@ -22,7 +22,8 @@
 * (These are basic use in work environment)
 
 #### Regular sketch tools
-![Sketch Tools](imgs/sketch_tools.png)
+<img src="imgs/sketch_tools.png" width="500" alt="Sketch Tools">
+
 
 
 ##  **Grid**
@@ -32,7 +33,8 @@
 ```
 
 ### One picture shows the div layout
-![DIV Layout](imgs/div_layout.png)
+<img src="imgs/div_layout.png" width="500" alt="DIV Layout">
+
 
 ### z-index
    The z-index CSS property of a positioned element and its descendants or flex items. Overlapping elements with a larger z-index cover those with a smaller one.

@@ -123,15 +123,15 @@ transform: translateX(-50% -50%);
 }
 ```
 
-### Transition
+## Transition
 - Not all the properties can use transition
 - Display:none => block can not be transited
 - Should use ***visibility:hidden => visible*** instead
 - Background and Opacity can use transition
 
 
-### Animation - KeyFrame Syntax
-    - Animation:
+## Animation - KeyFrame Syntax
+    Animation:
        time ||
        timing-function = linear ||
        single-animation-iteration-count = infinite||

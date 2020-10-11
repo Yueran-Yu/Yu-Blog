@@ -129,4 +129,8 @@ console.log('监听 ' + port + ' 成功\n请用在空中转体720度然后用电
 > For example, as long as the content of the file is CSS code, the file suffix can be un.css
 
 ### Attention
-![Attention](imgs/Response.png)
+<img src="imgs/server_runnng_state.png" width="800" alt="Checking request details in Network">
+<img src="imgs/Response.png" width="500" alt="Attention">
+<img src="imgs/request.png" width="500" alt="When Request">
+<img src="imgs/response_.png" width="500" alt="When Response">
+

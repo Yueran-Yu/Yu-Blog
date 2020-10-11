@@ -7,7 +7,8 @@
 > **Perfect Explanation of Webpage and Web Server:**
 >> Don't confuse websites and web servers. For example, if you hear someone say, "My website is not responding", it actually means that the web server is not responding and therefore the website is not available. More importantly, since a web server can host multiple websites, the term web server is never used to designate a website, as it could cause great confusion. In our previous example, if we said, "My web server is not responding", it means that multiple websites on that web server are not available.
 >
-**Read Articles Below, Helpful a Lot:**
+### Read Articles Below!!!
+
 1. [How does the Internet work?](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/How_does_the_Internet_work)
 2. [What is the difference between webpage, website, web server, and search engine?](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines)
 3. [What is a web server?](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_web_server)
@@ -17,7 +18,7 @@
 <img src="imgs/URL_components.png" width="500" alt="URL Components">
 <img src="imgs/URL_Example.png" width="500" alt="URL Example">
 
-## 2. What the function of DNS? how to use ***nslookup*** command?
+## 2. What the function of DNS? How to use ***nslookup*** command?
 > The domain name system resolves the names of internet sites with their underlying IP addresses adding efficiency and even security in the process.
 
 > Think of DNS like your smartphone's contact list, which matches people's name with their phone numbers and email addresses. Then multiply that contact list by everyone else on the planet.
@@ -61,5 +62,71 @@
 > - One IP corresponds to a different domain name.
 >   - This is called a Shared host, and poor developers do it.
 
-
 <img src="imgs/Domain_name.png" width="500" alt="Domain Name">
+
+
+## HTTP Request & Response
+You can read the article in MDN as well: [HTTP Messages](https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages)
+
+```javascript
+var http = require('http')
+var fs = require('fs')
+var url = require('url')
+var port = process.argv[2]
+
+if (!port) {
+  console.log('请指定端口号好不啦？\nnode server.js 8888 这样不会吗？')
+  process.exit(1)
+}
+var server = http.createServer(function (request, response) {
+  var parsedUrl = url.parse(request.url, true)
+  var pathWithQuery = request.url
+  var queryString = ''
+  if (pathWithQuery.indexOf('?') >= 0) { queryString = pathWithQuery.substring(pathWithQuery.indexOf('?')) }
+  var path = parsedUrl.pathname
+  var query = parsedUrl.query
+  var method = request.method
+
+  /******** 从这里开始看，上面不要看 ************/
+
+  console.log('有个傻子发请求过来啦！路径（带查询参数）为：' + pathWithQuery)
+
+  if (path === '/') {
+    response.statusCode = 200
+    response.setHeader('Content-Type', 'text/html;charset=utf-8')
+    response.write(`二哈`)
+    response.end()
+  } else if (path === '/x') {
+    response.statusCode = 200
+    response.setHeader('Content-Type', 'text/css;charset=utf-8')
+    response.write(`body{color: red;}\n`)
+    response.end()
+  } else {
+    response.statusCode = 404
+    response.setHeader('Content-Type', 'text/html;charset=utf-8')
+    response.write(`你输入的路径不存在对应的内容`)
+    response.end()
+  }
+
+  /******** 代码结束，下面不要看 ************/
+})
+server.listen(port)
+console.log('监听 ' + port + ' 成功\n请用在空中转体720度然后用电饭煲打开 http://localhost:' + port)
+```
+> #### Logic:
+> - According to the path and return back a string
+> - Every time when you receive a request, the middle part code will be executed
+> - Use ```if else``` to choose the path, and return the response
+> - Return status code ```200``` if it is a known path
+> - Return status code ```404``` if the is an unknown path
+> - ```Content-Type``` represents ```Type/Grammar``` of the content
+> - ```response.write()``` represents the return content
+> - ```response.end()``` represents when execute this code, the response will send to the user immediately
+
+## IMPORTANT!!!
+> The function of file suffix is to facilitate the identification of applications on the operating system, front-end request or response code in the identification of files don't rely on suffixes
+>
+> For example, as long as the content of the file is CSS code, the file suffix can be un.css
+
+### Attention
+![Attention](imgs/Response.png)

@@ -34,3 +34,6 @@
 - Both of then store the address of the prototype
 - However, prototype only exists in functions
 - __proto__ exists in every new object
+
+***Important Photo***
+>    <img src="imgs/Prototype_Array_Object.png" width="500" alt="Change Value">

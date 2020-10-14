@@ -128,4 +128,59 @@ Object
 > <img src="imgs/LookupProperty.png" width="500" alt="Look up Prototype">
 > <img src="imgs/Emphasis.png" width="500" alt="Emphasis property">
 > <img src="imgs/Emphasis2.png" width="500" alt="Emphasis property2">
->
+
+
+###  Add or Modify Property Values
+```javascript
+// direct assign value
+let obj = {name: 'frank'}  //'name' is a string
+let obj.name = 'frank'  //'name' is a string
+obj['na' + 'name'] = 'frank'
+let key = 'frank'; obj[key] = 'frank'
+
+//assign value in batches
+Object.assign(obj, {p1:1, p2:2, p3:3, p4:4, p5: 5})
+ ```
+
+ ### Add or Modify Prototype - **Common Properties**
+
+ - #### We cannot modify or add common Properties by object itself
+ ```javascript
+let obj = {}; let obj2 = {} // they have common 'toString'
+obj.toString = 'xxx'
+// you can change the toString value of the Object  obj, but this toString property now only belongs to obj, not belongs to any other Object like obj2
+
+obj2.toString  // it still on the common properties
+```
+- #### If you insist to modify or add value to the Prototype (Common Property)
+```javascript
+obj.__proto__.toString = 'xxx'  //not recommend to use __proto__
+Object.prototype.toString = 'xxx'
+
+// ****** Generally, please don't modify the prototype, can cause a lot of problem
+ ```
+
+ ### Modify hidden Properties
+ - ####  Not recommend to use __proto__
+ ```javascript
+ let obj = {'name': 'frank'}
+ let obj2 = {'name': 'jack'}
+ let common = {kind: 'human'}
+ obj.__proto__ = common
+ obj2.__proto__ = common
+ ```
+
+ - #### Recommend to use **Object.create()**
+```javascript
+let obj = Object.create(common)
+obj.name = 'frank'
+let obj2 = Object.create(common)
+obj2.name = 'jack'
+
+//规范大概的意思是，要改就一开始就改，别后来再改
+// 需要修改本地属性的时候 如下:
+Object.assign(obj, {p1:1, p2,2})
+```
+
+
+

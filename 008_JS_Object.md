@@ -47,3 +47,85 @@ Object.keys(obj) // can get all the keys of that obj
 
 # The hidden Property in the Object
 > <img src="imgs/hiddenObjectProperty.png" width="500" alt="hidden Object Property">
+>
+
+
+### Delete Property
+```javascript
+let obj = {name:'frank', age: 18}
+obj.name = undefined
+
+console.log(obj)
+// result: {name: undefined, age: 18}
+
+delete obj.name
+console.log(obj)
+// result: {age: 18}
+
+delete obj['name']
+// result: true
+
+// check if you have deleted the property successfully or not
+// true => property exists, false => property not exists
+'name' in obj
+
+name in obj
+// result: false
+// because name and 'name' are different things,
+// we have never declared or defined or assigned any value to name before
+// name without ''  is a variable
+```
+> <img src="imgs/DeleteProperty.png" width="500" alt="Delete Property">
+
+### Read Property
+```javascript
+let obj = {name:'frank', age: 18}
+Object.keys(obj)
+//result: (2)["name","age"]
+Object.values(obj)
+//result: (2)["frank","18"]
+Object.entries(obj)
+//result:
+// (2) [Array(2), Array(2)]
+// 0: (2) ["name", "frank"]
+// 1: (2) ["age", 18]
+// length: 2
+// __proto__: Array(0)
+```
+
+**When you want to see all the properties in a object, please use  ```Console.dir()```  to print out all the properties.**
+```javascript
+var obj = {name:'frank', age: 18}
+undefined
+console.dir(obj)
+VM301:1
+Object
+  age: 18
+  name: "frank"
+  __proto__:
+  constructor: ƒ Object()
+  hasOwnProperty: ƒ hasOwnProperty()
+  isPrototypeOf: ƒ isPrototypeOf()
+  propertyIsEnumerable: ƒ propertyIsEnumerable()
+  toLocaleString: ƒ toLocaleString()
+  toString: ƒ toString()
+  valueOf: ƒ valueOf()
+  __defineGetter__: ƒ __defineGetter__()
+  __defineSetter__: ƒ __defineSetter__()
+  __lookupGetter__: ƒ __lookupGetter__()
+  __lookupSetter__: ƒ __lookupSetter__()
+  get __proto__: ƒ __proto__()
+  set __proto__: ƒ __proto__()
+```
+> <img src="imgs/CheckAllProperties.png" width="500" alt="Check All Properties">
+```javascript
+ obj.hasOwnProperty('toString')  //result: false
+  obj.hasOwnProperty('name')  //result: true
+ ```
+
+### More Explanation about Prototype
+> <img src="imgs/Prototype.png" width="500" alt="Prototype">
+> <img src="imgs/LookupProperty.png" width="500" alt="Look up Prototype">
+> <img src="imgs/Emphasis.png" width="500" alt="Emphasis property">
+> <img src="imgs/Emphasis2.png" width="500" alt="Emphasis property2">
+>

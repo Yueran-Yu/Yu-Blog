@@ -171,6 +171,7 @@ Object.prototype.toString = 'xxx'
  ```
 
  - #### Recommend to use **Object.create()**
+
 ```javascript
 let obj = Object.create(common)
 obj.name = 'frank'

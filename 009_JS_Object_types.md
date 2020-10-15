@@ -126,3 +126,29 @@ let square = {
   dog1.run() // result: running
   dog1.bark() // result: barking
 ```
+
+# Prototype Formula
+```javascript
+  let obj = new Square()
+  obj.__proto__ === Square.prototype
+  对象.__proto__ === 其构造函数.prototype
+  // 你是谁的构造的  你的原型就是谁的prototype属性对应的对象
+```
+<img src="imgs/equal_address.png" width="300" alt="equal address">
+
+### Object need to be classified
+```javascript
+function Circle(radius){
+    this.radius = radius
+}
+Circle.prototype.getLength = function(){
+    return this.radius * 2 * Math.PI
+}
+Circle.prototype.getArea = function(){
+    return Math.pow(this.radius, 2) * Math.PI
+}
+let c1 = new Circle(10)
+c1.radius //result: 10
+c1.getLength() // result: 62.83185307179586
+c1.getArea() // result: 314.1592653589793
+```

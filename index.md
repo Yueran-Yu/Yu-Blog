@@ -1,4 +1,6 @@
 # Technology Learning List
+009_JS_Object_types
+* [009 JS Object Types](009_JS_Object_types.md)
 * [008 JS Object](008_JS_Object.md)
 * [007 JS Basic Syntax](007_JS_Basic_Syntax.md)
 * [006 Memory Plot and JS World](006_Memory_Plot_and_JS.md)

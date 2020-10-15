@@ -1,5 +1,5 @@
 # Technology Learning List
-009_JS_Object_types
+* [010 JS Array](010_JS_Array.md)
 * [009 JS Object Types](009_JS_Object_types.md)
 * [008 JS Object](008_JS_Object.md)
 * [007 JS Basic Syntax](007_JS_Basic_Syntax.md)

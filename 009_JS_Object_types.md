@@ -111,18 +111,18 @@ let square = {
 
 - **Example**
 ```javascript
-function Dog(name){
-  this.name = name
-  this.color = 'white'
-  this.kind = 'abs'
-}
+  function Dog(name){
+    this.name = name
+    this.color = 'white'
+    this.kind = 'abs'
+  }
 
-Dog.prototype.bark = function(){console.log('barking')}
-Dog.prototype.run = function(){console.log('running')}
-let dog1 = new Dog('little w')
-Dog {name: "little w", color: "white", kind: "abs"}
+  Dog.prototype.bark = function(){console.log('barking')}
+  Dog.prototype.run = function(){console.log('running')}
+  let dog1 = new Dog('little w')
+  Dog {name: "little w", color: "white", kind: "abs"}
 
-let dog1 = new Dog('little w')
-dog1.run() // result: running
-dog1.bark() // result: barking
+  let dog1 = new Dog('little w')
+  dog1.run() // result: running
+  dog1.bark() // result: barking
 ```

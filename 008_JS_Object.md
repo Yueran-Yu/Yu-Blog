@@ -181,4 +181,7 @@ Object
   Object.assign(obj, {p1:1, p2,2})
   ```
 
+- ### Code Rule
+<img src="imgs/code_rule.png" width="500" alt="Code Rule">
+
 

@@ -152,3 +152,8 @@ c1.radius //result: 10
 c1.getLength() // result: 62.83185307179586
 c1.getArea() // result: 314.1592653589793
 ```
+
+### Function Object
+<img src="imgs/func_obj.png" width="500" alt="function object">
+<img src="imgs/js_Q.png" width="500" alt="js object">
+

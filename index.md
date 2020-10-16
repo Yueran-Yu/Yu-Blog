@@ -1,4 +1,7 @@
 # Technology Learning List
+
+* [012 JS_Execution Time](012_JS_Execution_Time.md)
+* [011 JS Function](011_JS_Function.md)
 * [010 JS Array](010_JS_Array.md)
 * [009 JS Object Types](009_JS_Object_types.md)
 * [008 JS Object](008_JS_Object.md)

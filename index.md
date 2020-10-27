@@ -1,4 +1,6 @@
 # Technology Learning List
+* [014 jQuery Learning](014_jQuery_Learning.md)
+* [013 Three Problem For Programmer](013_Three_Problem_For_Programmer.md)
 * [012 JS_Execution Time](012_JS_Execution_Time.md)
 * [011 JS Function](011_JS_Function.md)
 * [010 JS Array](010_JS_Array.md)

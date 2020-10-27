@@ -11,8 +11,8 @@ $("*")	// * - All elements
 $("#lastName")	// #id - The element with id="lastName"
 $(".intro")	// .class - All elements with class="intro"
 $(".intro,.demo")	// .class,.class - All elements with the class "intro" or "demo"
-$("p") // element	-	All <p> elements
-$("h1,div,p")	//el1,el2,el3	 - All <h1>, <div> and <p> elements
+$("p") // element - All <p> elements
+$("h1,div,p")	//el1,el2,el3 - All <h1>, <div> and <p> elements
 ```
 ### 2. jQuery - What is chain operation
 > With jQuery, you can chain together actions/ methods

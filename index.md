@@ -1,5 +1,7 @@
 # Technology Learning List
 
+
+* [016 Document Methods Collection](016_Document_Methods_Collection.md)
 * [015 DOM Event and Event Delegation](015_DOM_Event_Delegation.md)
 * [014 jQuery Learning](014_jQuery_Learning.md)
 * [013 Three Problem For Programmer](013_Three_Problem_For_Programmer.md)

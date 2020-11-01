@@ -26,18 +26,19 @@
 > In the bubbling model, the opposite will happen: the event will be first handled by the ```li```, then by the ```ul```, and at last by the ``` div``` element.
 
 > In the example below, if you click on any of the highlighted elements, you can see that the capturing phase of the event propagation flow occurs first, followed by the bubbling phase.
+>
  ```html
-  <div>1
-      <div>2
-          <div>3
-              <div>4
-                  <div>5</div>
-              </div>
-          </div>
-      </div>
-  </div>
-  <button id="clear">clear output</button>
-  <section id="log"></section>
+    <div>1
+        <div>2
+            <div>3
+                <div>4
+                    <div>5</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button id="clear">clear output</button>
+    <section id="log"></section>
 ```
 ```javascript
   var logElement = document.getElementById('log')
@@ -240,3 +241,5 @@
 
 ### The Benefit of Event Delegation
 [Reference: What's the benefit?](https://stackoverflow.com/questions/1687296/what-is-dom-event-delegation)
+
+#### What is

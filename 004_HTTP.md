@@ -14,6 +14,7 @@
 3. [What is a web server?](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_web_server)
 4. [What are hyperlinks? The concepts behind links on the web.](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_hyperlinks)
 5. [What is a URL?](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL)
+6. [What is the difference between URI, URL and URN?](https://stackoverflow.com/questions/4913343/what-is-the-difference-between-uri-url-and-urn)
 
 <img src="imgs/URL_components.png" width="500" alt="URL Components">
 <img src="imgs/URL_Example.png" width="500" alt="URL Example">

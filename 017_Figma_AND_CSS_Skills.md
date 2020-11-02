@@ -7,7 +7,7 @@
 - Adjust the size of image without deformation: Press ```shift``` to drag image
 - Check space or pixel between 2 rectangles:
   - Select one rectangle, press ```option```, hover to another rectangle, you will see the pixel between them
-  - <img src="imgs/check_pixel.png" width="500" alt="check_pixel.png">
+  - <img src="imgs/check_pixel.png" width="800" alt="check_pixel.png">
 
 
 ### CSS Tips

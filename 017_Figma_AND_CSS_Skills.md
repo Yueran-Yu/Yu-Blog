@@ -38,6 +38,25 @@
 ### About CSS Height
 > Only the innermost elements can add height, the outside elements should use padding or margin to fill in and put up the box.
 >
+### How to Reference jQuery?
+>Make sure jQuery is loaded before your code. So for instance:
+```html
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script src="your-code.js"></script>
+
+    Or
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script>
+    // Your code
+    </script>
+
+    NOT:
+    <!-- Not like this -->
+    <script src="your-code.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+```
+
 
 
 

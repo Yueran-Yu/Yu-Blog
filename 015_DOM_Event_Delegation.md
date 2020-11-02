@@ -14,11 +14,11 @@
 
 **Example**
 ```html
-<div>
-  <ul>
-    <li></li>
-  </ul>
-</div>
+    <div>
+    <ul>
+        <li></li>
+    </ul>
+    </div>
 ```
 
 > In the structure above, assume that a click event occurred in the ```li``` element.
@@ -70,14 +70,14 @@
 
 ### About the Order Of Capture and Bubble
 ```html
-  <div id="div1">1
-      <div id="div2">2</div>
-      <div id="div3">3</div>
-  </div>
+    <div id="div1">1
+        <div id="div2">2</div>
+        <div id="div3">3</div>
+    </div>
 ```
 
 ```javascript
-  // V. 1
+   // V. 1
     div1.addEventListener('click',()=>{
         alert('div1, here is bubble')
     })
@@ -105,7 +105,7 @@
 ```
 
 ```javascript
-// V. 2
+    // V. 2
     div1.addEventListener('click',()=>{
         alert('div1, here is capture')
     },true)
@@ -134,7 +134,7 @@
 ```
 
 ```javascript
-  // V. 3
+    // V. 3
     div2.addEventListener('click',()=>{
         alert('div2, here is bubble')
     })
@@ -193,37 +193,38 @@
 ## Target VS. CurrentTarget
 **Example**
 ```html
-<div id="div1" data-id = "1">1
-  <div id="div2" data-id = "2">2</div>
-  <div id="div3" data-id = "3">3</div>
-</div>
+    <div id="div1" data-id = "1">1
+    <div id="div2" data-id = "2">2</div>
+    <div id="div3" data-id = "3">3</div>
+    </div>
 ```
+
 ```javascript
-  // test e.currentTarget and e.target
-  div2.addEventListener('click', (e)=>{
-      alert('div2, here is capture ' + 'target: ' + e.target.dataset.id + 'currentTarget: ' + e.currentTarget.dataset.id)
-  }, true)
+    // test e.currentTarget and e.target
+    div2.addEventListener('click', (e)=>{
+        alert('div2, here is capture ' + 'target: ' + e.target.dataset.id + 'currentTarget: ' + e.currentTarget.dataset.id)
+    }, true)
 
 
-  div2.addEventListener('click',()=>{
-      alert('div2, here is bubble '  + 'target: ' + e.target.dataset.id + ' currentTarget: ' + e.currentTarget.dataset.id)
-  })
+    div2.addEventListener('click',()=>{
+        alert('div2, here is bubble '  + 'target: ' + e.target.dataset.id + ' currentTarget: ' + e.currentTarget.dataset.id)
+    })
 
-  div3.addEventListener('click',()=>{
-      alert('div3, here is bubble')
+    div3.addEventListener('click',()=>{
+        alert('div3, here is bubble')
 
-  })
-  div3.addEventListener('click', ()=>{
-      alert('div3, here is capture')
-  }, true)
+    })
+    div3.addEventListener('click', ()=>{
+        alert('div3, here is capture')
+    }, true)
 
 
-  div1.addEventListener('click',(e)=>{
-      alert('div1, here is bubble '  + 'target: ' + e.target.dataset.id + ' currentTarget: ' + e.currentTarget.dataset.id)
-  })
-  div1.addEventListener('click',(e)=>{
-      alert('div1, here is capture '  + 'target: ' + e.target.dataset.id + ' currentTarget: ' + e.currentTarget.dataset.id)
-  },true)
+    div1.addEventListener('click',(e)=>{
+        alert('div1, here is bubble '  + 'target: ' + e.target.dataset.id + ' currentTarget: ' + e.currentTarget.dataset.id)
+    })
+    div1.addEventListener('click',(e)=>{
+        alert('div1, here is capture '  + 'target: ' + e.target.dataset.id + ' currentTarget: ' + e.currentTarget.dataset.id)
+    },true)
 ```
 ## Event Delegation
 > DOM event delegation is a  mechanism of responding to ui-events via a single common parent rather than each child, through the magic of event "bubbling".
@@ -231,11 +232,11 @@
 > Event bubbling provides the foundation for event delegation in browsers. Now you can bind an event handler to a single parent element, and that handler will get executed whenever the event occurs on any of its child nodes(and any of their children in turn)  ```This is event delegation```**. Here is an example of it in practice.
 
 ```html
-<ul onclick="alert(event.type + '!')">
-    <li>One</li>
-    <li>Two</li>
-    <li>Three</li>
-</ul>
+    <ul onclick="alert(event.type + '!')">
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+    </ul>
 ```
 > With that example if you were to click on any of the child ```<li>``` nodes, you would see an alert of ```"click"```, even though there is no click handler bound to the ```<li>```  you clicked on. If we bound ```onclick="..."``` to each ```<li>``` you would get the same effect.
 >

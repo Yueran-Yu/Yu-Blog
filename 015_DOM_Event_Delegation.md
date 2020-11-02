@@ -40,31 +40,32 @@
     <button id="clear">clear output</button>
     <section id="log"></section>
 ```
+
 ```javascript
-  var logElement = document.getElementById('log')
+    var logElement = document.getElementById('log')
 
-  function log(msg){
-    logElement.innerHTML += ('<p>' + msg + '</p>')
-  }
+    function log(msg){
+        logElement.innerHTML += ('<p>' + msg + '</p>')
+    }
 
-  function capture(){
-    log('capture: ' + this.firstChild.nodeValue.trim())
-  }
+    function capture(){
+        log('capture: ' + this.firstChild.nodeValue.trim())
+    }
 
-  function bubble(){
-    log('bubble: ' + this.firstChild.nodeValue.trim())
-  }
+    function bubble(){
+        log('bubble: ' + this.firstChild.nodeValue.trim())
+    }
 
-  function clearOutput(){
-    logElement.innerElement = ""
-  }
-  var divs = document.getElementsByTagName('div')
-  for (var i = 0; i < divs.length; i++){
-      divs[i].addEventListener('click', capture,true)
-      divs[i].addEventListener('click', bubble, false)
-  }
-  var clearButton = document.getElementById('clear')
-  clearButton.addEventListener('click', clearOutput)
+    function clearOutput(){
+        logElement.innerElement = ""
+    }
+    var divs = document.getElementsByTagName('div')
+    for (var i = 0; i < divs.length; i++){
+        divs[i].addEventListener('click', capture,true)
+        divs[i].addEventListener('click', bubble, false)
+    }
+    var clearButton = document.getElementById('clear')
+    clearButton.addEventListener('click', clearOutput)
 ```
 
 ### About the Order Of Capture and Bubble

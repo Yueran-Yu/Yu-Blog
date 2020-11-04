@@ -63,11 +63,25 @@
 ```
 
 ### How to use Parcel to build the code
-```
+```javascript
   1. parcel build src/index.html --no-minify
   2. rm -rf dist // this is clear the dist if you want to build a brand new parcel of your code
 
-```
+  https://yueran-yu.github.io/JRG-Course/NavigationPage/dist/
+
+  //this path that will show for user to click
+
+  // The complete Parcel command
+  parcel --help // look into the document parcel
+
+  // add absolute path
+  parcel build src/index.html --no-minify --public-url  https://yueran-yu.github.io/JRG-Course/NavigationPage/dist/
+
+  // add positive path
+  parcel build src/index.html --no-minify --public-url ./
+  ```
+
+
 
 
 

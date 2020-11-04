@@ -100,6 +100,8 @@
   ```
   > You can run the ```Parcel``` next time by typing **```yarn build```** in the terminal
 
+  [My Website Link: Front-End Navigation](https://yueran-yu.github.io/JRG-Course/NavigationPage/dist/index.html)
+
 
 
 

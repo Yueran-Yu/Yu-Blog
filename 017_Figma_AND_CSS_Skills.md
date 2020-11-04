@@ -1,3 +1,8 @@
+## When you are independently doing a project, you should:
+- ### Set a small goal and achieve it.
+- ### Don't think about being perfect, only guarantee there is no bug.
+
+
 ### Figma Tips
 - Copy a Rectangle: Mac press ```option``` , Win press ```Alt```,then drag the original rectangle to the target place
 - White: ```#ffffff```
@@ -57,6 +62,12 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 ```
 
+### How to use Parcel to build the code
+```
+  1. parcel build src/index.html --no-minify
+  2. rm -rf dist // this is clear the dist if you want to build a brand new parcel of your code
+
+```
 
 
 

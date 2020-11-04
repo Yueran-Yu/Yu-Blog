@@ -65,7 +65,7 @@
 ### How to use Parcel to build the code
 ```javascript
   1. rm -rf dist // this is clear the dist if you want to build a brand new parcel of your code
-  2. parcel build src/index.html --no-minify ./
+  2. parcel build src/index.html --no-minify --public-url ./
 
   https://yueran-yu.github.io/JRG-Course/NavigationPage/dist/
 

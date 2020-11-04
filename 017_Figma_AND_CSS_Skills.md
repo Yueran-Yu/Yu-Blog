@@ -77,7 +77,7 @@
   // add absolute path
   parcel build src/index.html --no-minify --public-url  https://yueran-yu.github.io/JRG-Course/NavigationPage/dist/
 
-  // add positive path
+  // add relative path
   parcel build src/index.html --no-minify --public-url ./
 
   // create a /gitignore file to ignore .idea and node_modules/

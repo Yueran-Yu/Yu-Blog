@@ -1,4 +1,5 @@
 # Technology Learning List
+* [018 Server & AJAX](018_Server_AJAX.md)
 * [017 Figma AND CSS Skills](017_Figma_AND_CSS_Skills.md)
 * [016 Document Methods Collection](016_Document_Methods_Collection.md)
 * [015 DOM Event and Event Delegation](015_DOM_Event_Delegation.md)

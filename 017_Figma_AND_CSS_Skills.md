@@ -87,7 +87,7 @@
   ```javascript
       "scripts": {
       "build": "rm -rf dist; parcel build src/index.html --no-minify ./"
-      // here is the sentence you need to add to;  window may not support ';' after 'dist'
+      // here is the sentence you need to add to;  window system may not support ';' after 'dist'
       },
       "devDependencies": {
         "cssnano": "^4.1.10"

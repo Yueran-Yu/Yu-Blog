@@ -10,3 +10,7 @@
 2. Call ```open```  method of ```HttpRequest``` [MDN Link:XMLHttpRequest.open(method, url)](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/open)
 3. Listen ```onload``` or ```onerror``` of that object
 4.  Send request: ```request.send()```
+
+
+### AJAX Server.js Assignment GitHub Link
+[AJAX Server.js Source Code](https://github.com/Yueran-Yu/JRG-Course/tree/master/Server_AJAX)

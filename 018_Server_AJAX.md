@@ -8,7 +8,7 @@
 > Previously we use ```  <link rel="stylesheet" href="style.css"> ``` to reference css file
 1. Create a ```HttpRequest``` object in a javascript file
 2. Call ```open```  method of ```HttpRequest``` [MDN Link:XMLHttpRequest.open(method, url)](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/open)
-3. Listen ```onload``` or ```onerror``` of that object
+3. Listen ```obj.onreadystatechange = () => {}``` of that object
 4.  Send request: ```request.send()```
 
 

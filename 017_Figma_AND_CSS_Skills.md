@@ -102,6 +102,34 @@
 
   [My Website Link: Front-End Navigation](https://yueran-yu.github.io/JRG-Course/NavigationPage/dist/index.html)
 
+### Static Scoping VS Dynamic Scoping
+```javascript
+function fn1(){
+
+    function fn2(){
+        console.log(a)
+    }
+
+    // when the fn2 function has a parameter, the final result will be  4
+    // function fn2(a){
+    // console.log(a)
+    // }
+
+    function fn3(){
+        var a = 4
+        fn2()
+    }
+    var a = 2
+    return fn3
+  }
+
+    var fn = fn1()
+    fn() // result: 2
+```
+**Answer:**
+> 静态作用域，看定义的位置，跟在哪调用无关, fn2中没有a，就会去它定义的上一层中找，就是fn1中, 跟在哪调用无关，因为JS是静态作用域的，只看它在何处定义的.
+>
+> 我的想法是动态作用域的想法，会在运行时沿着调用链查找；但是JS规定的是静态作用域，一个变量定义的那一刻，作用域就已经确定了，跟调用毛关系没有
 
 
 

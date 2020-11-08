@@ -44,3 +44,38 @@ function add(x, y){
 add.call(undefined, 1,2)
 // first value used to occupy the position
 ```
+
+## Arrow Function
+- **Regular function 'this' refers parent, left of the dot**
+- **Arrow function refers to it's current surrounding scope**
+```javascript
+  // regular function
+  const bob = {
+    firstName: "bob",
+    lastName: "smith",
+    sayName: function() {
+      const self = this
+      setTimeout(function() {
+        console.log(`Hello, my name is ${self.firstName} ${self.lastName}`);
+      })
+    }
+  }
+  bob.sayName()
+  //result: Hello, my name is bob smith
+```
+
+```javascript
+ // arrow function
+  const bob1 = {
+    firstName: "bob",
+    lastName: "smith",
+    sayName: function() {
+      setTimeout(()=> {
+        console.log(`Hello, my name is ${this.firstName} ${this.lastName}`);
+      })
+    }
+  }
+bob1.sayName()
+// Hello, my name is bob smith
+
+```

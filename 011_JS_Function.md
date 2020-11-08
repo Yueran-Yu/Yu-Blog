@@ -79,3 +79,19 @@ bob1.sayName()
 // Hello, my name is bob smith
 
 ```
+
+### Arrow Function Hoisting
+```javascript
+  // sayHi() is a normal function
+  sayHi()
+  const john = 'john'
+  const peter = 'Peter'
+
+  function sayHi(person = "Susan"){
+    console.log(`Hi ${person}`)
+  }
+
+  // this is an arrow function, but called before it initialized
+  sayHello()
+  const sayHello = (person = "Bob") => console.log(`Hello ${person}`)
+```

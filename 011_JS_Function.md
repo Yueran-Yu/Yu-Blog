@@ -95,3 +95,36 @@ bob1.sayName()
   sayHello()
   const sayHello = (person = "Bob") => console.log(`Hello ${person}`)
 ```
+### Array Destructing
+```javascript
+  // Array destructing
+  const friends = ['john', 'peter', 'bob', 'alice']
+
+  const [a, b, x] = friends
+  console.log(a, b, x);
+```
+
+### Object Destructing
+```javascript
+    // Object destructing
+    const bob = {
+      first: 'bob',
+      last: 'sanders',
+      city: 'chicago',
+      siblings: {
+        sister: 'jane'
+      },
+    }
+
+    const {
+      first: firstName,
+      last,
+      city,
+      zip,
+      hop,
+      siblings: {sister: favoriteSibling},
+    } = bob;
+
+    console.log(firstName, last, city, hop,favoriteSibling)
+```
+

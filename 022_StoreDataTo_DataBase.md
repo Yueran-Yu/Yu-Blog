@@ -49,3 +49,6 @@
 5.  Back-End(Node Server) retrieve the ```name``` and ```password```
 6.  Back-End(Node Server) read the data to see if there is a ```name``` and ```password``` match
 7.  If Back-End(Node Server) has found any matched data, mark the user as logged in. We need to figure out how to mark the logged in user.
+
+## Target 3: Show if the user login or not
+

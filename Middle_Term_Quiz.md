@@ -3,22 +3,22 @@
 >
 
 - #### Here is the example of function of closure:
-> ```javascript
->   let global = 33
->   function outside() {
->     let a = 10
->     let b = 20
->
->     function inside() {
->       let c = 30
->       return a + b + c + global
->     }
->     return inside
->   }
->   // When we call outside()
->   let result = outside()()
->   console.log(result)  // 93
-> ```
+```javascript
+   let global = 33
+   function outside() {
+     let a = 10
+     let b = 20
+
+     function inside() {
+       let c = 30
+       return a + b + c + global
+     }
+     return inside
+   }
+   // When we call outside()
+   let result = outside()()
+   console.log(result)  // 93
+```
 > The above combination is a closure.
 > ```inside()``` function is nested in the ```outside()``` function.
 >
@@ -100,6 +100,8 @@
     }
   }
 
-  let thisIsMyCar = heavenSome.myCar.bind(p1, "Toyota", "Silver", "2020")  // return a function [Function: bound myCar]
-  console.log(thisIsMyCar());  // My name is John Doe, I have a car, it's Toyota, the color is Silver and it is made in 2020
+  let thisIsMyCar = heavenSome.myCar.bind(p1, "Toyota", "Silver", "2020")
+  // return a function [Function: bound myCar]
+  console.log(thisIsMyCar());
+  // output: My name is John Doe, I have a car, it's Toyota, the color is Silver and it is made in 2020
 ```

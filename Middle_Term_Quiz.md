@@ -37,3 +37,69 @@
 > Closure may lead to over-consumption of memory, and probably memory leaks if not handled properly.
 - #### How to fix that?
 > Use closures only when you need privacy otherwise use module pattern to create new objects with methods inside.
+
+
+### 2. How to use ```call, apply, bind``` ?
+- ####  The ```call()``` method calls a function with a given this value and arguments provided individually.
+```javascript
+  // example #1
+  let person = {
+    name: 'Harry Porter',
+    sayHi: function(param){
+      console.log(this.name + " say hello to " + param);
+    }
+  }
+
+  person.sayHi("Lady Gaga")  // output: Harry Porter say hello to Lady Gaga
+  let otherName = {name: "Princess Helen."}
+  person.sayHi.call(otherName, "Tom Ford") // output: Princess Helen. say hello to Tom Ford
+  person.sayHi.call({name: "Happy Sunday"}, "Lander Wood")
+
+  // example #2
+  let someone = {
+    fullName: function(){
+      return this.firstName + " " + this.lastName
+    }
+  }
+
+  let p1 = {
+    firstName:"John",
+    lastName: "Doe"
+  }
+  let p2 = {
+    firstName:"Mary",
+    lastName: "Doe"
+  }
+
+  console.log(someone.fullName.call(p1)) // output: "John Doe"
+  console.log(someone.fullName.call(p2)) // output: "Mary Doe"
+```
+- #### ```apply()``` is similar to ```call()``` except that it takes an array-like object instead of listing the arguments out one at a time.
+- #### The call() method takes arguments separately.
+- #### The apply() method takes arguments as an array.
+```javascript
+  let collectionInfo = {
+    fullName: function(city, country){
+      return this.firstName + " " + this.lastName +  " comes from " + " " + city + ", " + country;
+    }
+  }
+
+   let p1 = {
+    firstName:"John",
+    lastName: "Doe"
+  }
+
+  console.log(collectionInfo.fullName.apply(p1, ["Boston", "America"]));
+  // output: John Doe comes from  Boston, America
+```
+- #### ```bind()``` returns a new function, allowing you to pass in a this array and any number of arguments
+```javascript
+  let heavenSome = {
+    myCar(carMode, carColor, carYear){
+     return `My name is ${this.firstName} ${this.lastName}, I have a car, it's ${carMode}, the color is ${carColor} and it is made in ${carYear}`
+    }
+  }
+
+  let thisIsMyCar = heavenSome.myCar.bind(p1, "Toyota", "Silver", "2020")  // return a function [Function: bound myCar]
+  console.log(thisIsMyCar());  // My name is John Doe, I have a car, it's Toyota, the color is Silver and it is made in 2020
+```

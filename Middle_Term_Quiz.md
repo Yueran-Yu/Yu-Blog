@@ -105,7 +105,9 @@
   console.log(thisIsMyCar());
   // output: My name is John Doe, I have a car, it's Toyota, the color is Silver and it is made in 2020
 ```
-### Please describe more information about HTTP status code, at least 10
+
+
+### 3. Please describe more information about HTTP status code, at least 10
 1. #### Success 2XX
 > This class of status codes indicates the action requested by the client was received, understood, and accepted.
 2. #### OK 200
@@ -134,7 +136,52 @@
 > A generic error message, given when an unexpected condition was encountered and no more specific message is suitable.
 14.  #### Not Implemented 501
 > The server either does not recognize the request method, or it lacks the ability to fulfil the request.
-15.  #### Bad Gateway
+15.  #### Bad Gateway 502
 > The server was acting as a gateway or proxy and received an invalid response from the upstream server.
 16. #### Service Unavailable 503
 > The server cannot handle the request (because it is overloaded or down for maintenance). Generally, this is a temporary state.
+
+
+### 4. Remove duplicate elements from array in Javascript
+#### Classic interview questions
+> Here is an array ```let array = [1,5,2,3,4,2,3,1,3,4]```, please write a function ```unique(array)```, the final result is ```[1,5,2,3,4]```, remove the duplicate values.
+>
+> Requirement:
+> - One way don't use ```Set``` (6 points)
+```javascript
+  let array = [1, 5, 2, 3, 4, 2, 3, 1, 3, 4]
+  function removeDup(arr) {
+    return arr.filter((element, index) => {
+      console.log(element + "===" + arr.indexOf(element) + "===" + index);
+      // 1===0===0
+      // 5===1===1
+      // 2===2===2
+      // 3===3===3
+      // 4===4===4
+      // 2===2===5
+      // 3===3===6
+      // 1===0===7
+      // 3===3===8
+      // 4===4===9
+      return arr.indexOf(element) === index
+    })
+  }
+  console.log(removeDup(array).sort());
+  // output:[ 1, 2, 3, 4, 5 ]
+  console.log(array.indexOf(3));
+  // output: 3
+```
+> - Another way use ```Set``` (4 points)
+```javascript
+  let array = [1, 5, 2, 3, 4, 2, 3, 1, 3, 4]
+  function removeDup1(obj){
+    return [...new Set(obj)]
+  }
+  console.log(removeDup1(array).sort());
+  // output:[ 1, 2, 3, 4, 5 ]
+```
+> - Use ```Map/WeakMap``` to remove duplicate values. (Extra 5 points)
+>
+> Explain the cons of each method (Extra Points)
+
+

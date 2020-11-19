@@ -1,0 +1,33 @@
+body{
+  color:blue;
+  /* vbn */
+}
+
+/* .box :first-of-type {
+  background-color: pink;
+} */
+
+/* .box :last-of-type{
+  background-color: green;
+} */
+
+/* .box p:first-of-type{
+  background-color: orange;
+} */
+
+/* .box :nth-of-type(2){
+  background-color: orange;
+} */
+
+.box{
+  display: inline-block;
+  border: 1px solid #333;
+  width: 100px;
+  /* vertical-align: top; */
+
+  margin: 0 auto;
+}
+
+.box:nth-child(3){
+  font-size: 20px;
+}

@@ -65,4 +65,43 @@ let heavenSome = {
 let thisIsMyCar = heavenSome.myCar.bind(p1, "Toyota", "Silver", "2020")  // return a function [Function: bound myCar]
 console.log(thisIsMyCar());  // My name is John Doe, I have a car, it's Toyota, the color is Silver and it is made in 2020
 
+let array = [1, 5, 2, 3, 4, 2, 3, 1, 3, 4]
+function removeDup(arr) {
+  return arr.filter((element, index) => {
+    console.log(element + "===" + arr.indexOf(element) + "===" + index);
+    // 1===0===0
+    // 5===1===1
+    // 2===2===2
+    // 3===3===3
+    // 4===4===4
+    // 2===2===5
+    // 3===3===6
+    // 1===0===7
+    // 3===3===8
+    // 4===4===9
+    return arr.indexOf(element) === index
+  })
+}
+console.log(removeDup(array).sort());
+console.log(array.indexOf(3));
+
+
+let array1 = [1, 5, 2, 3, 4, 2, 3, 1, 3, 4]
+function removeDup1(obj) {
+  return [...new Set(obj)]
+}
+console.log(removeDup1(array1).sort());
+
+
+let array2 = [1, 5, 2, 3, 4, 2, 3, 1, 3, 4]
+function removeDup3(arr) {
+  return [...new Map(
+    arr.map(x => [key(x), x])
+  ).values()
+  ]
+}
+
+removeDup3(array2, element => console.log(element))
+
+
 

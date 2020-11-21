@@ -113,3 +113,36 @@ console.log(removeDup4(array2).sort()); // result: [ 1, 2, 3, 4, 5 ]
 
 
 
+let countSort = (arr) => {
+  let hashTable = {}, max = 0, result = []
+  for(let i = 0; i < arr.length; i++){  //traverse array
+     if(!(arr[i] in hashTable)){
+       hashTable[arr[i]] = 1
+     }
+     else
+     {
+       hashTable[arr[i]] += 1
+     }
+
+     if(arr[i] > max){
+       max = arr[i]
+     }
+  }
+
+  for(let j = 0; j <= max; j++){
+    if(j in hashTable){
+      for(let i = 0; i < hashTable[j]; j++){
+        result.push(j)
+      }
+    }
+  }
+  return result
+}
+
+let array5 = [2,1,5,3,8,4,9,5]
+
+
+console.log("Count Sort=========");
+console.log(countSort(array5));
+
+

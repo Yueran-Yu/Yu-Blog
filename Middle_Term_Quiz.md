@@ -420,3 +420,40 @@ alert(rabbits.jumps)// true
       }
     }
 ```
+
+### 7. Sort() function
+> Here is an array = [2,1,5,3,8,4,9,5]. please create an methods, sort the array in an ascending order
+> this sort(array)  function will get the result of an array [1,2,3,4,5,5,8,9], you can modify the original array or create a new variable to store the sorted array. Don't use the In-Build JS sort API
+```javascript
+  //Counting Sort
+  let countSort = (arr) => {
+    let hashTable = {}, max = 0, result = []
+    for(let i = 0; i < arr.length; i++){  //traverse array
+       if(!(arr[i] in hashTable)){
+         hashTable[arr[i]] = 1
+       }
+       else
+       {
+         hashTable[arr[i]] += 1
+       }
+
+       if(arr[i] > max){
+         max = arr[i]
+       }
+    }
+
+    for(let j = 0; j <= max; j++){
+      if(j in hashTable){
+        for(let i = 0; i < hashTable[j]; j++){
+          result.push(j)
+        }
+      }
+    }
+    return result
+  }
+
+  let array5 = [2,1,5,3,8,4,9,5]
+  console.log("Count Sort=========");
+  console.log(countSort(array5));
+  // [ 1, 2, 3, 4, 5, 8, 9]
+```

@@ -150,7 +150,7 @@
 > - One way don't use ```Set``` (6 points)
 ```javascript
   let array = [1, 5, 2, 3, 4, 2, 3, 1, 3, 4]
-  function removeDup(arr) {
+  function unique(arr) {
     return arr.filter((element, index) => {
       console.log(element + "===" + arr.indexOf(element) + "===" + index);
       // 1===0===0
@@ -166,7 +166,7 @@
       return arr.indexOf(element) === index
     })
   }
-  console.log(removeDup(array).sort());
+  console.log(unique(array).sort());
   // output:[ 1, 2, 3, 4, 5 ]
   console.log(array.indexOf(3));
   // output: 3
@@ -174,14 +174,249 @@
 > - Another way use ```Set``` (4 points)
 ```javascript
   let array = [1, 5, 2, 3, 4, 2, 3, 1, 3, 4]
-  function removeDup1(obj){
+  function unique(obj){
     return [...new Set(obj)]
   }
-  console.log(removeDup1(array).sort());
+  console.log(unique(array).sort());
   // output:[ 1, 2, 3, 4, 5 ]
 ```
 > - Use ```Map/WeakMap``` to remove duplicate values. (Extra 5 points)
+
+```javascript
+let array = [1, 5, 2, 3, 4, 2, 3, 1, 3, 4]
+function unique(arr){
+  let hashMap = new Map()
+  let result = new Array() // collect the result the returned by parameter arr
+
+  for(let i = 0; i < arr.length; i++){
+     if(hashMap.has(arr[i])){ // check if it has been existed a key in the hashMap
+     hashMap.set(arr[i], true) // "true" means key is existed in the hasMap
+     }else{
+       hashMap.set(arr[i], false)
+       result.push(arr[i]) // if there no the same key in the hashMap, add to the result
+  }
+  return result
+}
+console.log(unique(array).sort()); // result: [ 1, 2, 3, 4, 5 ]
+```
+> Explain the cons of each method (Extra 2 Points)
+
+
+
+### DOM Event
+> 1. What is Event Delegation (4 points)
 >
-> Explain the cons of each method (Extra Points)
+>DOM event delegation is a  mechanism of responding to ui-events via a single common parent rather than each child, through the magic of event "bubbling".
+>
+> Event bubbling provides the foundation for event delegation in browsers. Now you can bind an event handler to a single parent element, and that handler will get executed whenever the event occurs on any of its child nodes(and any of their children in turn)  ```This is event delegation```. Here is an example of it in practice.
+>
+```html
+    <ul onclick="alert(event.type + '!')">
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+    </ul>
+```
+> With that example if you were to click on any of the child ```<li>``` nodes, you would see an alert of ```"click"```, even though there is no click handler bound to the ```<li>```  you clicked on. If we bound ```onclick="..."``` to each ```<li>``` you would get the same effect.
 
+> 2. How to prevent default Action (3 points)
+>
+> The ```preventDefault()``` method cancels the event if it is cancelable, meaning that the default, action that belongs to the event will not occur.
+>
+```html
+<button id="demo">Click Me</button>
+```
+```javascript
+  document.getElementById("demo").addEventListener('click', (e)=>{
+    e.preventDefault()
+  })
+```
+>
+> 3. How to prevent bubbling? (3 points)
+>
+> The ```stopPropagation``` method of the ```Event``` interface prevents further propagation of the current event in the capturing and bubbling phases. It does not prevent any default behaviors from occurring; for example, clicks on links are still processed. If you want to stop those behaviors, see the ```preventDefault()```.
+```javascript
+ e.stopPropagation()
+```
 
+### How to explain the ```inheritance``` of Javascript?
+1. #### Inheritance based on Prototype? (5 points)
+> In programming, we often want to take something and extend it.
+>
+> For instance, we have a ```user``` object with its properties and methods, and want to make ```admin``` and ```guest``` as slightly modified variants of it. We'd like to reuse what we have in ```user```, not copy or re-implement its methods, just build a new object on top of it.
+>
+> Prototypal inheritance is a language feature that helps in that.
+> ### [[Prototype]]
+> In Javascript, objects have a special hidden property ```[[Prototype]]``` (as named in the specification), that is either ```null``` or references another object. That object is called "a prototype".
+>
+> When we read a property  from ```object```, and it's missing, Javascript automatically takes it from the prototype. In programming, such thing is called "prototypal inheritance". And soon we'll study many examples of such inheritance, as well as cooler language features built upon it.
+>
+> The property ```[[Prototype]]``` is internal and hidden, but there are many ways to set it.
+> >
+> One of them is to use the special name ```__proto```, like this:
+```javascript
+let animal = {
+  eats: true
+}
+
+let rabbit = {
+  jumps: true
+}
+
+rabbit.__proto__ = animal; // (*) set rabbit.[[Prototype]] = animal
+```
+
+> Now if we read a property from ```rabbit```, and it's missing, Javascript will automatically take it from ```animal```.
+```javascript
+// we can find both properties in rabbit now
+alert(rabbits.eats) // true (**)
+alert(rabbits.jumps)// true
+```
+
+> Here the line(*) sets ```animal``` to be a prototype of ```rabbit```
+> >
+> Then, when ```alert``` tries to read property ```rabbit.eats(**)```, it's not in ```rabbit```, so Javascript follows the ```[[Prototype]]``` reference and finds it in ```animal``` (look from the bottom up):
+>
+<img src="imgs/proto1.png" width="200" alt="">
+
+> Here We can say that "animal" is the prototype of "rabbit" or "rabbit" prototypically inherits from "animal".
+> >
+> So if ```animal``` has a lot of useful properties and methods, then they become automatically available in ```rabbit```. Such properties are called ```inherited```:
+>
+> If we have a method in ```animal```, it can be called on ```rabbit```:
+```javascript
+    let animal = {
+      eats: true,
+      walk(){
+        alert("Animal walk")
+      }
+    }
+
+    let rabbit = {
+      jumps: true,
+      __proto__: animal
+    }
+    // walk is taken from the prototype
+    rabbit.walk() // Animal walk
+```
+> The prototype chain can be longer:
+```javascript
+    let animal = {
+      eats: true,
+      walk() {
+        alert("Animal walk");
+      }
+    };
+
+    let rabbit = {
+      jumps: true,
+      __proto__: animal
+    };
+
+    let longEar = {
+      earLength: 10,
+      __proto__: rabbit
+    };
+
+    // walk is taken from the prototype chain
+    longEar.walk(); // Animal walk
+    alert(longEar.jumps); // true (from rabbit)
+```
+<img src="imgs/proto2.png" width="200" alt="">
+
+> Now if we read something from ```longEar```, and it's missing, Javascript will look for it in ```rabbit```, and then in ```animal```.
+
+> There are only two limitations:
+> 1. The references can't go in circles. Javascript will throw an error if we try to assign ```__proto__``` in a circle.
+> 2. The value of ```__proto__``` can be either an object or ```null```. Other types are ignored.
+> >
+> Also it may be obvious, but still: there can be only one [[Prototype]]. An object may not inherit from two others.
+
+> ```__proto__``` is a historical ```getter / setter``` for ```[[Prototype]]```
+> It is a common mistake of novice developers not to know the difference between these two.
+> Please not that ```__proto__``` is not the same as the internal ```[[Prototype]]``` property. It's a getter/setter for ```[[Prototype]]```.
+> >
+> The ```__proto__``` property is a bit outdated. It exists for historical reasons, modern Javascript suggests that we should use ```Object.getPrototypeOf / Object.setPrototypeOf``` functions instead that get/set the prototype. We'll also cover these functions later.
+> >
+> By the specification, ```__proto__``` must only be supported by browsers. In fact through, all environments including server-side support ```__proto__```, so we're quite safe using it.
+> >
+> As the ```__proto__``` notation is a bit more intuitively obvious, we use it in the example.
+2. #### Inheritance based on class? (5 points)
+#### Class Inheritance of ES5
+```javascript
+  // ES5
+  function Animal (name, energy){
+    this.name = name
+    this.energy = energy
+  }
+
+  Animal.prototype.eat = function(amount){
+    console.log(`${this.name} is eating.`)
+    this.energy += amount
+  }
+
+  Animal.prototype.sleep = function(length){
+    console.log(`${this.name} is sleeping.`)
+    this.energy  += length
+  }
+
+  Animal.prototype.play = function(length){
+    console.log(`${this.name} is playing.`)
+    this.energy -= length
+  }
+  const leo = new Animal('Leo', 7)
+
+  //In ES5, refactor a Dog class by inheriting the Animal Class
+
+  function Dog(name, energy, breed){
+    Animal.call(this, name, energy)
+    this.breed = breed
+  }
+
+  Dog.prototype = Object.create(Animal.prototype)
+  Dog.prototype.bark = function(){
+    console.log('Woof Woof!')
+    this.energy -= .1
+  }
+  Dog.prototype.constructor = Dog
+```
+#### Class Inheritance of ES6
+```javascript
+    //ES6
+    class Animal{
+      constructor(name, energy){
+        this.name = name
+        this.energy = energy
+      }
+
+      eat(amount){
+        console.log(`${this.name} is eating.`)
+        this.energy += amount
+      }
+
+      sleep(length){
+        console.log(`${this.name} is sleeping.`)
+        this.energy += length
+      }
+
+      play(length){
+        console.log(`${this.name} is playing.`)
+        this.energy -= length
+      }
+    }
+
+    const leo = new Animal('Leo', 7)
+
+    // IE6, refactor a Dog class by inheriting from the Animal Class
+    class Dog extends Animal{
+      constructor(name, energy, breed){
+        super(name, energy)
+        this.breed = breed
+      }
+
+      bark(){
+        console.log('Woof Woof!')
+        this.energy -= .1
+      }
+    }
+```

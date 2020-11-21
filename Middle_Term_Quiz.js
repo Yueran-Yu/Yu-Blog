@@ -94,14 +94,22 @@ console.log(removeDup1(array1).sort());
 
 
 let array2 = [1, 5, 2, 3, 4, 2, 3, 1, 3, 4]
-function removeDup3(arr) {
-  return [...new Map(
-    arr.map(x => [key(x), x])
-  ).values()
-  ]
+function removeDup4(arr) {
+  let hashMap = new Map()
+  let result = new Array() // collect the result the returned by parameter arr
+
+  for (let i = 0; i < arr.length; i++) {
+    if (hashMap.has(arr[i])) { // check if there has been existed a key in the hashMap
+      hashMap.set(arr[i], true)
+    } else {
+      hashMap.set(arr[i], false)
+      result.push(arr[i])
+    }
+  }
+  return result
 }
 
-removeDup3(array2, element => console.log(element))
+console.log(removeDup4(array2).sort()); // result: [ 1, 2, 3, 4, 5 ]
 
 
 

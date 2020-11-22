@@ -457,3 +457,107 @@ alert(rabbits.jumps)// true
   console.log(countSort(array5));
   // [ 1, 2, 3, 4, 5, 8, 9]
 ```
+
+
+### 8 Explain What is Promise？
+- #### What is Promise used for?
+> Description of Promise
+>
+> A "producing code" that does something and takes time. For instance, some code that loads the data over a network.
+> A "consuming code" that wants the result of the "producing code once it's ready. Many functions may need that result.
+> A promise is special Javascript object that links the "producing code" and the "consuming code" together. In terms of our analogy: this is the "subscription list". The "producing code" takes whatever time it needs to produce the promised result, and the "promise" makes that result available to all of the subscribed code when it's ready.
+>
+- #### How to build a ```new Promise```
+```javascript
+  let promise = new Promise(function(resolve, reject){
+    // executor (the producing code)
+  })
+```
+> The function passed to ```new Promise``` is called executor. When ```new Promise``` is created, the executor runs automatically, It contains the ```producing code``` which should eventually produce the result.
+>
+> Its arguments ```resolve``` and ```reject``` are callbacks provided by Javascript itself. Our code is only inside the executor.
+>
+> When the executor obtains the result, be it soon or late, doesn't matter, it should call one of these callbacks:
+> ```resolve(value)``` - if the job finished successfully, with result ```value```.
+> ```reject(error)``` - if an error occurred, ```error()``` is the error object.
+> >
+> So to summarize: the executor runs automatically and attempts to perform a job. When it is finished with the attempt it calls ```resolve``` if it was not successful or ```reject``` if there was an error.
+>
+> The ```promise``` object returned by the ```new Promise``` constructor has these internal properties:
+>
+> - ```state``` - initially ```"pending"```, then changes to either ```"fulfilled"``` when ```resolve``` is called or ```"rejected"``` when ```reject``` is called.
+
+- #### How to use ```Promise.prototype.then()``` ?
+> The most important, fundamental one is ```.then```
+>
+> The syntax is:
+```javascript
+   promise.then(
+     function(result) { /* handle a successful result */ }
+     function(error) { /* handle an error */ }
+   )
+```
+> The first argument of ```.then``` is a function that runs when the promise is resolved, and receives the result.
+>
+> The second argument of ```.then``` is a function thar runs when the promise is rejected, and receives the error.
+> >
+> For instance, here's a reaction to a successfully resolved promise:
+```javascript
+  let promise = new Promise(function(resolve, reject){
+    setTimeout(()=> resolve("done!"), 1000)
+  })
+
+  // resolve runs the first function in .then
+  promise.then(
+    result => alert(result), // shows "done!" after 1 second
+    error => alert(error) // doesn't run
+  )
+```
+> The first function was executed.
+> And in the case of a rejection, the second one:
+```javascript
+  let promise = new Promise(function(resolve, reject){
+    setTimeout(()=> reject(new Error("Whoops!")), 1000)
+  })
+
+  // reject runs the second function in .then
+  promise.then(
+    result => alert(result), // doesn't run
+    error => alert(error) // shows "Error: Woops!" after 1 second
+  )
+```
+> If we're interested only in successful completions, then we can provide only one function argument to ```.then```
+
+```javascript
+  let promise = new Promise(resolve => {
+    setTimeout(()=> resolve("done!"), 1000)
+  })
+
+  promise.then(alert) // shows "done!" after 1 second
+```
+
+- #### How to use ```Promise.all``` ?
+
+- #### How to use ```Promise.race()``` ?
+如何使用 Promise.all（可查 MDN）
+如何使用 Promise.race（可查 MDN）
+
+
+### 9 说说跨域。
+
+要点：
+
+什么是同源
+什么是跨域
+JSONP 跨域
+CORS 跨域
+
+
+### 10 说说你对前端的理解
+
+评分标准：
+
+0 分：言之无物，看不下去
+5 分：人云亦云，流于平庸
+10 分满分：见解深刻，有自己的想法
+15 分：惊为天人

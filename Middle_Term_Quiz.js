@@ -145,4 +145,18 @@ let array5 = [2,1,5,3,8,4,9,5]
 console.log("Count Sort=========");
 console.log(countSort(array5));
 
+const promise1 = new Promise((resolve, reject) =>{
+  setTimeout(resolve, 500, "one")
+})
+
+const promise2 = new Promise((resolve, reject) =>{
+  setTimeout(resolve, 100, "two")
+})
+
+Promise.race([promise1, promise2]).then((value) => {
+  console.log(value)
+  // both resolve, but promise2 is faster
+})
+
+
 

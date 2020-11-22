@@ -535,11 +535,23 @@ alert(rabbits.jumps)// true
 
   promise.then(alert) // shows "done!" after 1 second
 ```
-
 - #### How to use ```Promise.all``` ?
+> The ```Promise.all()``` method takes an iterable of promises as an input, and returns a single ```Promise``` that resolves to an array of the results of the input promises. This returned promise will resolve when all of the input's promises have resolved, or if the input iterable contains no promises. It rejects immediately upon any of the input promises rejecting or non-promises throwing an error, and will reject with this first rejection message / error.
+
+```javascript
+  const promise1 = Promise.resolve(3)
+  const promise2 = 42
+  const promise3 = new Promise((resolve, reject) => {
+    setTimeout(resolve, 100 'foo')
+  })
+
+  Promise.all([promise1, promise2, promise3]).then((values) => {
+    console.log(values)
+  })
+  //expected output: Array [3, 42, "foo"]
+```
 
 - #### How to use ```Promise.race()``` ?
-如何使用 Promise.all（可查 MDN）
 如何使用 Promise.race（可查 MDN）
 
 

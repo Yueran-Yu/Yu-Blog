@@ -1,7 +1,7 @@
 # Technology Learning List
 
 
-* [Middle_Term_Quiz.md](Middle_Term_Quiz.md)
+* [Middle_Term_Quiz](Middle_Term_Quiz.md)
 * [022 Store Data To DataBase](022_StoreDataTo_DataBase.md)
 * [018 Server & AJAX](018_Server_AJAX.md)
 * [017 Figma AND CSS Skills](017_Figma_AND_CSS_Skills.md)

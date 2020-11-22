@@ -255,15 +255,13 @@ console.log(unique(array).sort()); // result: [ 1, 2, 3, 4, 5 ]
 > >
 > One of them is to use the special name ```__proto```, like this:
 ```javascript
-let animal = {
-  eats: true
-}
-
-let rabbit = {
-  jumps: true
-}
-
-rabbit.__proto__ = animal; // (*) set rabbit.[[Prototype]] = animal
+  let animal = {
+    eats: true
+  }
+  let rabbit = {
+    jumps: true
+  }
+  rabbit.__proto__ = animal; // (*) set rabbit.[[Prototype]] = animal
 ```
 
 > Now if we read a property from ```rabbit```, and it's missing, Javascript will automatically take it from ```animal```.
@@ -291,7 +289,6 @@ alert(rabbits.jumps)// true
         alert("Animal walk")
       }
     }
-
     let rabbit = {
       jumps: true,
       __proto__: animal
@@ -307,17 +304,14 @@ alert(rabbits.jumps)// true
         alert("Animal walk");
       }
     };
-
     let rabbit = {
       jumps: true,
       __proto__: animal
     };
-
     let longEar = {
       earLength: 10,
       __proto__: rabbit
     };
-
     // walk is taken from the prototype chain
     longEar.walk(); // Animal walk
     alert(longEar.jumps); // true (from rabbit)
@@ -349,30 +343,24 @@ alert(rabbits.jumps)// true
     this.name = name
     this.energy = energy
   }
-
   Animal.prototype.eat = function(amount){
     console.log(`${this.name} is eating.`)
     this.energy += amount
   }
-
   Animal.prototype.sleep = function(length){
     console.log(`${this.name} is sleeping.`)
     this.energy  += length
   }
-
   Animal.prototype.play = function(length){
     console.log(`${this.name} is playing.`)
     this.energy -= length
   }
   const leo = new Animal('Leo', 7)
-
   //In ES5, refactor a Dog class by inheriting the Animal Class
-
   function Dog(name, energy, breed){
     Animal.call(this, name, energy)
     this.breed = breed
   }
-
   Dog.prototype = Object.create(Animal.prototype)
   Dog.prototype.bark = function(){
     console.log('Woof Woof!')
@@ -388,17 +376,14 @@ alert(rabbits.jumps)// true
         this.name = name
         this.energy = energy
       }
-
       eat(amount){
         console.log(`${this.name} is eating.`)
         this.energy += amount
       }
-
       sleep(length){
         console.log(`${this.name} is sleeping.`)
         this.energy += length
       }
-
       play(length){
         console.log(`${this.name} is playing.`)
         this.energy -= length
@@ -413,7 +398,6 @@ alert(rabbits.jumps)// true
         super(name, energy)
         this.breed = breed
       }
-
       bark(){
         console.log('Woof Woof!')
         this.energy -= .1
@@ -500,13 +484,12 @@ alert(rabbits.jumps)// true
 > The first argument of ```.then``` is a function that runs when the promise is resolved, and receives the result.
 >
 > The second argument of ```.then``` is a function thar runs when the promise is rejected, and receives the error.
-> >
+>
 > For instance, here's a reaction to a successfully resolved promise:
 ```javascript
   let promise = new Promise(function(resolve, reject){
     setTimeout(()=> resolve("done!"), 1000)
   })
-
   // resolve runs the first function in .then
   promise.then(
     result => alert(result), // shows "done!" after 1 second
@@ -519,7 +502,6 @@ alert(rabbits.jumps)// true
   let promise = new Promise(function(resolve, reject){
     setTimeout(()=> reject(new Error("Whoops!")), 1000)
   })
-
   // reject runs the second function in .then
   promise.then(
     result => alert(result), // doesn't run
@@ -532,7 +514,6 @@ alert(rabbits.jumps)// true
   let promise = new Promise(resolve => {
     setTimeout(()=> resolve("done!"), 1000)
   })
-
   promise.then(alert) // shows "done!" after 1 second
 ```
 - #### How to use ```Promise.all``` ?
@@ -544,7 +525,6 @@ alert(rabbits.jumps)// true
   const promise3 = new Promise((resolve, reject) => {
     setTimeout(resolve, 100 'foo')
   })
-
   Promise.all([promise1, promise2, promise3]).then((values) => {
     console.log(values)
   })
@@ -557,31 +537,25 @@ alert(rabbits.jumps)// true
    const promise1 = new Promise((resolve, reject) =>{
      setTimeout(resolve, 500, "one")
    })
-
    const promise2 = new Promise((resolve, reject) =>{
      setTimeout(resolve, 100, "two")
    })
-
    Promise.race([promise1, promise2]).then((value) => {
      console.log(value)
      // both resolve, but promise2 is faster
    })
-
    // expected output: "two"
 ```
 
 
-### 9 说说跨域。
-
-要点：
-
-什么是同源
-什么是跨域
-JSONP 跨域
-CORS 跨域
+### 9 Explain Cross-Origin Resource Sharing (CORS)
+- #### What is Same-Origin Policy?
+- #### What is Cross-Origin Resource Sharing?
+- #### JSONP (Code)
+- #### CORS(Code)
 
 
-### 10 说说你对前端的理解
+### 10 Personal Understanding of Front-End
 
 评分标准：
 

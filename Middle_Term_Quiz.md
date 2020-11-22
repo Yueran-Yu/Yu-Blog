@@ -550,9 +550,82 @@ alert(rabbits.jumps)// true
 
 ### 9 Explain Cross-Origin Resource Sharing (CORS)
 - #### What is Same-Origin Policy?
-- #### What is Cross-Origin Resource Sharing?
+> The ```same-origin policy``` is a critical security mechanism that restricts how a document or script loaded from one ```origin``` interact with a resource from another origin. It helps isolate potentially malicious documents, reducing possible attack vectors.
+> Definition of an origin
+>
+> Two URLs have the same origin if the ```protocol```, ```port```(if specified), and ```host``` are the same for both.
+>
+> You may see this referenced as the "scheme/host/port tuple", or just "tuple". (A "tuple" is a set of items that together comprise a whole - a generic from for double/triple/quadruple/quintuple/etc)
+>
+> The following table gives examples of origin comparisons with the URL:
+>
+> http://store.company.com/dir/page.html
+
+|URL |Outcome| Reason|
+|:----|:------|:------|
+|http://store.company.com/dir2/other.html| Same Origin| Only the path differs|
+|http://store.company.com/dir/inner/another.html|Same Origin|Only the path differs|
+|https://store.company.com/page.html|Failure| Different protocol|
+|http://store.company.com:81/dir/page.html|Failure | Different port(http:// is port 80 by default)|
+|http://news.company.com/dir/page.html|Failure| Different host|
+|    |        |      |
+
+- #### What is Cross-Origin Resource Sharing? (CORS)
+> Cross-Origin Resource Sharing (CORS) is an HTTP-header based mechanism that allows a server to indicate any other origins(domain, protocol, or port) than its own from which a browser should permit loading of resources. CORS also relies on a mechanism by which browsers make a "preflight" request to the server hosting the cross-origin, in order to check that the server will permit the actual request. In that preflight, the browser sends headers that indicate the HTTP method and headers that will be used in the actual request.
+
 - #### JSONP (Code)
-- #### CORS(Code)
+> JSONP is a method for sending JSON data without worrying about cross-domain issues.
+>
+> JSONP does not use the ```XMLHttpRequest``` object.
+>
+> JSON use the ```<script>``` tag instead.
+>
+> JSONP stands for JSON with Padding.
+>
+> Requesting a file from another domain can cause problems, due to cross-domain policy.
+>
+> Requesting an external script from another domain does not have this problem.
+> JSONP uses this advantage, and request files using the script tag instead of the ```XMLHttpRequest``` object.
+> >
+> Say you're on domain ```example.com```, and you want to make a request to domain ```example.net```. To do so, you need to ```cross domain``` boundaries, a ```no-no``` in most of browserland.
+> >
+> The one item that bypasses this limitation is ```<script>``` tags. When you use a script tag, the domain limitation is ignored, but under normal circumstance, you can't really do anything with the results, the script just gets evaluated.
+
+> Enter ```JSONP```. When you make your request to a server that is JSONP enabled, you pass a special parameter that tells the server a little bit about your page. That way, the server is able to nicely wrap up its response in a way that your page can handle.
+>
+> For example, say the server expects a parameter called ```callback``` to enable its JSONP capabilities. Then your request would look like:
+```
+  http://www.example.net/sample.aspx?callback=mycallback
+```
+> Without JSONP, this might return some basic Javascript object, like so:
+```json
+  {foo: 'bar'}
+```
+> However, with JSONP, when the server receives the "callback" parameter, it wraps up the result a little differently, returning something like this:
+```javascript
+ mycallback({foo:"bar"})
+```
+> As you can see, it will now invoke the method you specified. So, in your page, you define the callback function.
+```javascript
+  mycallback = function(data){
+    alert(data.foo);
+  }
+```
+> And now, when the script is loaded, it'll be evaluated, and your function will be executed. Voila, cross-domain requests!
+- #### CORS (Code)
+> The Cross-Origin Resource Sharing standard works by adding new ```HTTP headers``` that let servers describe which origins are permitted to read that information from a web browser.
+>
+> ```Access-Control-Allow-Origin``` A returned resource may have one ```Access-Control-Allow-Origin``` header, with the following syntax:
+```
+  Access-Control-Allow-Origin: <origin> | *
+```
+> ```Access-Control-Allow-Origin``` specifies either a single origin, which tells browser to allow that origin to access the resource; or else - for requests without credentials - the "*" wildcard, to tell browsers to allow any origin to access the resource.
+> For example, to allow code from the origin: ```https://mozilla.org``` to access the resource, you can specify:
+```
+Access-Control-Allow-Origin: https: // mozilla.orig
+Vary: Origin
+```
+> If the server specifies a single origin (that may dynamically change based on the requesting origin as part of a white-list) rather than the "*" wildcard, then the server should also include ```Origin``` in the ```Vary```  response header - to indicate to clients that server responses will differ based on the value of the ```Origin``` request header.
 
 
 ### 10 Personal Understanding of Front-End

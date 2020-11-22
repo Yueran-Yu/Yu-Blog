@@ -629,10 +629,11 @@ Vary: Origin
 
 
 ### 10 Personal Understanding of Front-End
+> What is a Front-End Developer? The front-end of a website is the part that users interact with. Everything that you see when you're navigating around the internet, from fonts and colors to dropdown menus and sliders, is a combo of HTML, CSS and Javascript being controlled by your computer's browser.
 
-评分标准：
+> Front-end developers are responsible for a website's user-facing code and the architecture of its immersive user experiences. In order to execute those objectives, front-end devs must be adept at three main languages: HTML, CSS and Javascript programming. In addition to fluency in these language, front-end need to be familiar with frameworks like Bootstraps, Foundation, Backbone, AngularJS and EmberJS, which ensure great-looking content no matter the device, and libraries like jQuery and LESS, which package code into a more useful, time-saving form. A lot of front-end developer job listings also call for experience with Ajax, a widely used technique for using JS that lets pages dynamically load by downloading server data in the background.
 
-0 分：言之无物，看不下去
-5 分：人云亦云，流于平庸
-10 分满分：见解深刻，有自己的想法
-15 分：惊为天人
+> Everything you’re seeing on this website right now was made possible by a front-end developer. A designer crafted the logo and graphics, a photographer took the pictures, and a copywriter wrote the text. But a front-end dev assembled all of those pieces, translated them into web-speak, and built the experience you have with each page. To take one specific example, scroll up and down on the Udacity homepage. Notice how the “U” disappears and reappears? That’s the handiwork of a front-end developer.
+
+
+

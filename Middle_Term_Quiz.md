@@ -1,3 +1,4 @@
+## [Back To Index Page](https://www.graceyutech.com/Yu-Blog/)
 ### 1. What is closure?  What is the function of closure?  What is the disadvantage of closure?
 > A closure is a feature in Javascript where an inner function has access to the outer (enclosing) function's  variables.
 >

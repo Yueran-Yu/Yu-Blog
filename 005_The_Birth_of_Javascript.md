@@ -1,3 +1,4 @@
+## [Back To Index Page](https://www.graceyutech.com/Yu-Blog/)
 ## How to count lines of code of yourself
 
 #### Install

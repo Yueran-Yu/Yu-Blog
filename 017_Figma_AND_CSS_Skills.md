@@ -1,3 +1,4 @@
+## [Back To Index Page](https://www.graceyutech.com/Yu-Blog/)
 ## When you are independently doing a project, you should:
 - ### Set a small goal and achieve it.
 - ### Don't think about being perfect, only guarantee there is no bug.

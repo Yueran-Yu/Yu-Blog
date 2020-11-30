@@ -1,3 +1,4 @@
+## [Back To Index Page](https://www.graceyutech.com/Yu-Blog/)
 ## 1. URL contains what? What is the function of each part of the URL?
 > ```URL => Uniform Resource Locator```
 

@@ -1,3 +1,4 @@
+## [Back To Index Page](https://www.graceyutech.com/Yu-Blog/)
 ## Bubbling & Capturing
 [Reference: What is event Bubbling and Capturing?](https://stackoverflow.com/questions/4616694/what-is-event-bubbling-and-capturing)
 

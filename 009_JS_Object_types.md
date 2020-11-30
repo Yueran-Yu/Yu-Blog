@@ -1,3 +1,4 @@
+## [Back To Index Page](https://www.graceyutech.com/Yu-Blog/)
 # Does Object needs to be classified?
 ```javascript
 let square = {

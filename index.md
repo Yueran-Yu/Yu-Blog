@@ -1,5 +1,3 @@
-## [Back To Index Page](https://www.graceyutech.com/Yu-Blog/)
-
 
 * [Middle_Term_Quiz](Middle_Term_Quiz.md)
 * [022 Store Data To DataBase](022_StoreDataTo_DataBase.md)

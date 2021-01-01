@@ -11,10 +11,10 @@
 - Memory
 
 ## Stack and Heap
-<img src="imgs/StackHeap.png" width="500" alt="Heap and Stack">
+<img src="./imgs/StackHeap.png" width="500" alt="Heap and Stack">
 
 - Red area divided into Stack and Heap
-- The data structure about stack and heap will be talked later
+- The data structure about a stack and heap will be talked later
 - Stack: Each data stored in order
 - Heap: Each data stored randomly
 > Rules:

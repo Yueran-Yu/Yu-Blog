@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e2b70926-2185-4ee7-95a1-87b0412ab961" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Yu-Blog.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/024_MVC_EventBus.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/006_Memory_Plot_and_JS.md" beforeDir="false" afterPath="$PROJECT_DIR$/006_Memory_Plot_and_JS.md" afterDir="false" />
-    </list>
+    <list default="true" id="e2b70926-2185-4ee7-95a1-87b0412ab961" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +9,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="showPreview" value="true" />
   </component>
   <component name="ProjectId" id="1m7yjlKPqKyD9S6Q9tbkTk6Uk1w" />
   <component name="ProjectViewState">
@@ -45,6 +42,7 @@
       <option name="presentableId" value="Default" />
       <updated>1608859062163</updated>
       <workItem from="1608859063869" duration="3811000" />
+      <workItem from="1610512910650" duration="40000" />
     </task>
     <servers />
   </component>

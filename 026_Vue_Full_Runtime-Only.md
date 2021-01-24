@@ -6,13 +6,13 @@ template 和 render 怎么用
 
 ## Runtime + Compiler(Full) vs. Runtime-only
 
-  |Vue|Runtime + Compiler(Full)| Runtime-Only |Comments|
-  |-----|:-----:|:--------:|:-----:|
-  |Feature|Has Compiler| No Compiler |The runtime-only builds are roughly 30% lighter-weight than their full-build counterparts|
-  |View|Write in the HTML page or template page|Write in the **render** function and create HTML elements or tags through parameter **h** |h is the name of parameter, you can also use **createElement** as the parameter name|
-  |Reference CDN|vue.js| vue.runtime.js|The suffix of Production mode is **.min.js**|
-  |Reference webpack|Need add alias|Runtime-Only is default mode| Configured by Developer You|
-  |Reference @vue/cli|Need additional configuration|Runtime-Only is default mode|Configured by Developer You and his fellow|
+>  |Vue|Runtime + Compiler(Full)| Runtime-Only |Comments|
+>  |:-----|:-----:|:--------:|:-----:|
+>  |Feature|Has Compiler| No Compiler |The runtime-only builds are roughly 30% lighter-weight than their full-build counterparts|
+>  |View|Write in the HTML page or template page|Write in the **render** function and create HTML elements or tags through parameter **h** |h is the name of parameter, you can also use **createElement** as the parameter name|
+>  |Reference CDN|vue.js| vue.runtime.js|The suffix of Production mode is **.min.js**|
+>  |Reference webpack|Need add alias|Runtime-Only is default mode| Configured by Developer You|
+>  |Reference @vue/cli|Need additional configuration|Runtime-Only is default mode|Configured by Developer You and his fellow|
 
 #### Example of Template
 ```javascript

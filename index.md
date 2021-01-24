@@ -1,4 +1,5 @@
 
+* [027 Mount and Render](027_Mount_Render.md)
 * [026 Vue Full VS. Runtime-Only](026_Vue_Full_Runtime-Only.md)
 * [025 Loader and Plugin](025_Plugin_Loader.md)
 * [024 MVC EventBus](024_MVC_EventBus.md)

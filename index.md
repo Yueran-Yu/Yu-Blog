@@ -1,8 +1,8 @@
 
+* [026 Vue Full VS. Runtime-Only](026_Vue_Full_Runtime-Only.md)
 * [025 Loader and Plugin](025_Plugin_Loader.md)
 * [024 MVC EventBus](024_MVC_EventBus.md)
 * [023 async](023_async.md)
-* [022 Store Data To DataBase](022_StoreDataTo_DataBase.md)
 * [Middle_Term_Quiz](Middle_Term_Quiz.md)
 * [022 Store Data To DataBase](022_StoreDataTo_DataBase.md)
 * [021 Tagged_Template](021_Tagged_Template.md)

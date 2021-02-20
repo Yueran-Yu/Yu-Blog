@@ -1,4 +1,4 @@
-* [028 Three ways of using Vue Component](028_3_Ways_Vue_ Component.md)
+* [028 Three ways of using Vue Component](028_3_Ways_Vue_Component.md)
 * [027 Mount and Render](027_Mount_Render.md)
 * [026 Vue Full VS. Runtime-Only](026_Vue_Full_Runtime-Only.md)
 * [025 Loader and Plugin](025_Plugin_Loader.md)

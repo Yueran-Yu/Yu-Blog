@@ -11,7 +11,7 @@
         // run the test code we will going to write
         "eject": "react-scripts eject"
         // take out all of the configuration files that it's hidden from us from Babble and webpack in case wwe will manage it ourselves.
-        },
+        }
       ```
 2. ### *source* folder
     - All applications live, our workspace
@@ -93,3 +93,10 @@
    - ```Children``` are actually what you pass in between the brackets of our component that gets called.
 
 9. ### The Benefits of When do we break things down into components?
+    - To be a great React developer you need to be good at these very well:
+      - 1. Decide on Components
+      - 2. Decide the State and where it lives
+      - 3. What changes when state changes
+    - By breaking things down we're making things more flexible because each component does one thing and one thing really well.
+    - It can be used in other places, the bigger a file gets the more JSX we have, the more logic we have, the harder it gets to be used in another place.
+    - The KEY here is that the reason we break things down into smaller components is that we combine each component with its concern and that concern is that this component is only concerned about card list. This component is only concerned about cards.

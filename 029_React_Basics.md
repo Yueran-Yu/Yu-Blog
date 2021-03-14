@@ -69,13 +69,12 @@
   - ```props``` is going to be an object of any properties that you write onto this component where it gets used.
 
 8. ### *Children* Property
-  ```js
+    ```javascript
     // card-list.component.jsx
     import React from 'react';
         export const CardList = (props)=>{
           console.log(props);
           return (<div> {props.children}</div>)
-
 
     // App.js
       render(){
@@ -89,7 +88,8 @@
             {this.state.monsters.map(item => <h1 key={item.id}>{item.name}</h1>) }
           </div>
         )
-        }
-
-  ```
+      }
+    ```
   - ```Children``` are actually what you pass in between the brackets of our component that gets called.
+
+9. ### The Benefits of When do we break things down into components?

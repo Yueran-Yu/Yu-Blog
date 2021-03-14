@@ -1,6 +1,6 @@
 1. ### package.json
    -  ```"react-scripts":"3.0.0"``` =>  It allows use to have no worry about webpack and babble.
-   - ```json
+   - ```javascript
         "scripts": {
         "start": "react-scripts start",
         // starts the react project by running "yarn start"
@@ -38,3 +38,10 @@
           }
           //the 'className' in the render is used to differentiate the class at the beginning
       ```
+5. ### render() method
+  - ```render()``` is one of the built-in methods of ```React.Component```, the ``` super()``` inside the React.Component's ```constructor()``` helps us call ```render()```
+
+6. ### 2 Ways to create components
+  - Class Component
+  - Functional Component
+

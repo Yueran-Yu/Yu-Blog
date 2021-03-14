@@ -66,7 +66,7 @@
         )
       }
     ```
-  - ```props``` is going to be an object of any properties that you write onto this component where it gets used.
+    - ```props``` is going to be an object of any properties that you write onto this component where it gets used.
 
 8. ### *Children* Property
     ```javascript

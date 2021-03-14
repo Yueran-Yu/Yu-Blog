@@ -119,3 +119,20 @@
       }
     ```
    - **The second parameter** to ***setState()*** is an optional callback function that will be executed once ***setState*** is completed and the component is re-rendered. ***componentDitUpdate*** should be used instead to apply such logic in most cases.
+
+11. ### Destructuring
+    - ```javascript
+          constructor(props) {
+          super(props);
+          this.state = {
+            monsters: [],
+            searchField: ''
+          }
+        }
+
+      // the state object is what we want to pull the properties of
+      const {monsters, searchField} = this.state
+      // equals
+      const monsters = this.state.monsters
+      const searchField = this.state.searchField
+      ```

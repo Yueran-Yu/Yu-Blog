@@ -136,3 +136,9 @@
       const monsters = this.state.monsters
       const searchField = this.state.searchField
       ```
+12. ### When use class component and when use functional component?
+       - ***functional components***, unlike ***class components***, they don't have the access to ***state***, because they don't have the access to constructor, which is a class method on our ***Component*** that we import from our React, that we extend our class from.
+       - They also don't have access to lifecycle methods, because we don't always need lifecycle methods or internal state.
+       - Sometimes we only want to render some HTML, that's what functional component really is.
+       - A functional component is just a component that gets some props and returns some HTML.
+       - If you don't need internal state nor lifecycle methods, then just use functional components. It's easier to read and easier to test.

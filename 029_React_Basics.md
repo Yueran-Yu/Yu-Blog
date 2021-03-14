@@ -100,3 +100,22 @@
     - By breaking things down we're making things more flexible because each component does one thing and one thing really well.
     - It can be used in other places, the bigger a file gets the more JSX we have, the more logic we have, the harder it gets to be used in another place.
     - The KEY here is that the reason we break things down into smaller components is that we combine each component with its concern and that concern is that this component is only concerned about card list. This component is only concerned about cards.
+
+10. ### The second argument of ***setState()***
+    ```javascript
+    // App.js
+    // if we wanted to see or do something with our state right after we set it
+    // then we have to do it inside of this second argument function that will get called right after the set state.
+    render() {
+        return (
+            <div className="App">
+              <input type='search' placeholder='Search Monster'
+                    onChange={e => this.setState({searchField: e.target.value}, () => {
+                      console.log(this.state)
+                    })}/>
+              <CardList monsters={this.state.monsters}/>
+            </div>
+        )
+      }
+    ```
+   - **The second parameter** to ***setState()*** is an optional callback function that will be executed once ***setState*** is completed and the component is re-rendered. ***componentDitUpdate*** should be used instead to apply such logic in most cases.

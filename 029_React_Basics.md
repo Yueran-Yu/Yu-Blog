@@ -90,6 +90,6 @@
         )
       }
     ```
-  - ```Children``` are actually what you pass in between the brackets of our component that gets called.
+   - ```Children``` are actually what you pass in between the brackets of our component that gets called.
 
 9. ### The Benefits of When do we break things down into components?

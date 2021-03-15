@@ -147,13 +147,14 @@
 
 13. ### The test of the scope of arrow function
      ```javascript
-       // define the function in the window scope
+       // ======= define the function in the window scope
          const myFunc = () => console.log(this)
          // call myFunc()
          myFunc()
          // result: Window {window: Window, self: Window, document: document, name: "", location: Location, …}
 
-        // define a function in a class scope
+
+        // ======= define a function in a class scope
         class FatherClass{
             myFunc2 = () => console.log(this)
             }

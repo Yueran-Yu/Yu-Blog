@@ -144,3 +144,21 @@
        - Sometimes we only want to render some HTML, that's what functional component really is.
        - A functional component is just a component that gets some props and returns some HTML.
        - If you don't need internal state nor lifecycle methods, then just use functional components. It's easier to read and easier to test.
+
+13. ### The test of the scope of arrow function
+     ```javascript
+       // define the function in the window scope
+         const myFunc = () => console.log(this)
+         // call myFunc()
+         myFunc()
+         // result: Window {window: Window, self: Window, document: document, name: "", location: Location, …}
+
+        // define a function in a class scope
+        class FatherClass{
+            myFunc2 = () => console.log(this)
+            }
+          let obj = new FatherClass()
+          obj.myFunc2()
+          // result: FatherClass {myFunc2: ƒ}
+     ```
+

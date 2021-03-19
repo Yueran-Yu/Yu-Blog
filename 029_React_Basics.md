@@ -163,3 +163,5 @@
           // result: FatherClass {myFunc2: ƒ}
      ```
 
+     14. ### The remain knowledge of React
+

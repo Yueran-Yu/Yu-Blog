@@ -162,6 +162,26 @@
           obj.myFunc2()
           // result: FatherClass {myFunc2: ƒ}
      ```
+14. ### Always use the Latest Version of React and ReactDOM
+    ```json
+    {
+    "name": "monsters-rolodex",
+    "version": "0.1.0",
+    "private": true,
+    "homepage": "https://www.graceyutech.com/monsters-rolodex/",
+    "dependencies": {
+      "@testing-library/jest-dom": "^5.11.4",
+      "@testing-library/react": "^11.1.0",
+      "@testing-library/user-event": "^12.1.10",
+      "gh-pages": "^3.1.0",
+      "react": "^17.0.1",
+      /* '^' symbol means whatever the package manager you are using
+      wheather it is a yarn or NPM, whenever it sees npm upgrade or yarn upgrade,
+      to update to the latest stable non breaking version.     */
+      "react-dom": "^17.0.1",
+      "react-scripts": "4.0.3",
+      "web-vitals": "^1.0.1"
+    },
+    ```
 
-     14. ### The remain knowledge of React
 

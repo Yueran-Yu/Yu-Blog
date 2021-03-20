@@ -185,6 +185,7 @@
       "web-vitals": "^1.0.1"
     },
     ```
+
 - What is the ```yarn.lock``` file?
     1. It isn't auto-generated file by either NPM or a yarn that locks the version of all the packages inside of our application within a specific range based on the rules that we set inside of package.
     2. Without ```'^'``` this Caret symbol, the ```yarn.lock``` file, the version of React and ReactDOM and React scripts are locked exactly that version, the fixed version shows in ```package.json``` file.

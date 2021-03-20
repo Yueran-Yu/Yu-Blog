@@ -188,6 +188,6 @@
     - What is the ```yarn.lock``` file? And why we need this file?
       - It isn't auto-generated file by either NPM or a yarn that locks the version of all the packages inside of our application within a specific range based on the rules that we set inside of package.
       - Without ```'^'``` this Caret symbol, the ```yarn.lock``` file, the version of React and ReactDOM and React scripts are locked exactly that version, the fixed version shows in ```package.json``` file.
-      -
+      - However, when we added this caret ```'^'```, it gives more flexibility which means the ```yarn.lock``` file is out of date
 
 

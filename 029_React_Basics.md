@@ -19,7 +19,6 @@
     - All applications live, our workspace
 3. ### *public* folder
     - The browser needs an older version of javascript and html to understand
-
 4. ### *class* vs. *className*
    - ```javascript
         // class
@@ -42,7 +41,6 @@
       ```
 5. ### *render()* method
   - ```render()``` is one of the built-in methods of ```React.Component```, the ``` super()``` inside the React.Component's ```constructor()``` helps us call ```render()```
-
 6. ### 2 Ways to create components
   - Class Component
   - Functional Component

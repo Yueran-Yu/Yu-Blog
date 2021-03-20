@@ -177,11 +177,17 @@
       "react": "^17.0.1",
       /* '^' symbol means whatever the package manager you are using
       wheather it is a yarn or NPM, whenever it sees npm upgrade or yarn upgrade,
-      to update to the latest stable non breaking version.     */
+      to update to the latest stable non-breaking version.
+      In other words, it should be at least using the '17.0.1' version or greater of react-dom and react.
+      */
       "react-dom": "^17.0.1",
       "react-scripts": "4.0.3",
       "web-vitals": "^1.0.1"
     },
     ```
+    - What is the ```yarn.lock``` file? And why we need this file?
+      - It isn't auto-generated file by either NPM or a yarn that locks the version of all the packages inside of our application within a specific range based on the rules that we set inside of package.
+      - Without ```'^'``` this Caret symbol, the ```yarn.lock``` file, the version of React and ReactDOM and React scripts are locked exactly that version, the fixed version shows in ```package.json``` file.
+      -
 
 

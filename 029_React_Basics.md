@@ -195,4 +195,7 @@
     2. So ```yarn.lock``` file just ensures everybody is using a consistent version of these dependencies.
     3. After we run ```yarn.lock``` file, we generated a new lock file. From now on, you can simply run your yarn upgrade whenever you want to upgrade these dependencies.
 
+15. ### One main difference between ***yarn*** and ***npm***
+    - This command ```npm audit fix``` will go through and update the versions to a version of a package where it doesn't have a security concern anymore.
+    - While, yarn doesn't have this command, we only can install and upgrade all the packages that you see with a vulnerability.
 

@@ -163,7 +163,7 @@
           // result: FatherClass {myFunc2: ƒ}
      ```
 14. ### Always use the Latest Version of React and ReactDOM
-    ```json
+    ```javascript
     {
     "name": "monsters-rolodex",
     "version": "0.1.0",
@@ -186,12 +186,12 @@
     },
     ```
   - What is the ```yarn.lock``` file?
-      - It isn't auto-generated file by either NPM or a yarn that locks the version of all the packages inside of our application within a specific range based on the rules that we set inside of package.
-      - Without ```'^'``` this Caret symbol, the ```yarn.lock``` file, the version of React and ReactDOM and React scripts are locked exactly that version, the fixed version shows in ```package.json``` file.
+       - It isn't auto-generated file by either NPM or a yarn that locks the version of all the packages inside of our application within a specific range based on the rules that we set inside of package.
+       - Without ```'^'``` this Caret symbol, the ```yarn.lock``` file, the version of React and ReactDOM and React scripts are locked exactly that version, the fixed version shows in ```package.json``` file.
       - However, when we added this caret ```'^'```, it gives more flexibility which means the ```yarn.lock``` file is out of date and needs to be updated. And this file only updates whenever you run ```yarn install```.
   - And why we need this file?
-    - If there are multiple people are working on this application they are all using versions of dependencies that don't conflict with each other, because maybe some people are running React '17.0.0' someone is running React '16.0.0.', and there is difference in features that might be breaking in the application.
-    - So ```yarn.lock``` file just ensures everybody is using a consistent version of these dependencies.
-    - After we run ```yarn.lock``` file, we generated a new lock file. From now on, you can simply run your yarn upgrade whenever you want to upgrade these dependencies.
+      - If there are multiple people are working on this application they are all using versions of dependencies that don't conflict with each other, because maybe some people are running React '17.0.0' someone is running React '16.0.0.', and there is difference in features that might be breaking in the application.
+      - So ```yarn.lock``` file just ensures everybody is using a consistent version of these dependencies.
+      - After we run ```yarn.lock``` file, we generated a new lock file. From now on, you can simply run your yarn upgrade whenever you want to upgrade these dependencies.
 
 

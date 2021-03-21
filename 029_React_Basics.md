@@ -199,4 +199,4 @@
 16. ### What is Virtual DOM?
   - Virtual DOM is a javascript object. It's a way to emulate the Real DOM.
 
-17. ###
+17. ### State updates are asynchronous!!! You should Pass a function as the first parameter in the setState() to update the state synchronously!!!

@@ -1,8 +1,8 @@
 ## Setting Up React E-commerce Project
 
 1. ### How to pull code from Others github and change ***origin***?
-- ## Repository tutor_react
-- ## Repository student_react
+- #### Repository tutor_react
+- #### Repository student_react
 - ### Target: Pull down the code from Repository Tutor and put the code into our own folder ```student_react```
 - 1) ```git clone git@github.com:ZhangYihua/tutor_react.git student_react```
 - 2) git will clone this project into this folder ```student_react```

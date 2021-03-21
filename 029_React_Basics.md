@@ -1,5 +1,4 @@
 ## React Basics
-
 1. ### *package.json*
    -  ```"react-scripts":"3.0.0"``` =>  It allows use to have no worry about webpack and babble.
    - ```javascript
@@ -44,7 +43,6 @@
 6. ### 2 Ways to create components
   - Class Component
   - Functional Component
-
 7. ### *props* in the functional component
   - ```javascript
       import React from 'react';
@@ -198,3 +196,7 @@
     - This command ```npm audit fix``` will go through and update the versions to a version of a package where it doesn't have a security concern anymore.
     - While, yarn doesn't have this command, we only can install and upgrade all the packages that you see with a vulnerability.
 
+16. ### What is Virtual DOM?
+  - Virtual DOM is a javascript object. It's a way to emulate the Real DOM.
+
+17. ###

@@ -200,3 +200,16 @@
   - Virtual DOM is a javascript object. It's a way to emulate the Real DOM.
 
 17. ### State updates are asynchronous!!! You should Pass a function as the first parameter in the setState() to update the state synchronously!!!
+
+18. ### React Concepts
+    - #### 1. Don't touch the DOM. I'll do it
+    - #### 2. Build websites like lego blocks
+    - #### 3. Unidirectional data flow
+    - #### 4. UI, The rest is up to you
+
+19. ### The job of a SENIOR React Developer
+    - #### 1.Decide on Components
+    - #### 2. Decide the State and where it lives
+    - #### 3. What changes when state changes
+    - ***This idea of deciding on components, deciding about the state and where it lists what happens when state changes because of user action. These all things that nobody is going  to tell you. These are things that is dependent on each app that you built.***
+    - ***What the senior developers have had this ability to think for themselves not just follow a tutorial but actually implement these things based on knowledge and experience that they've gathered.***

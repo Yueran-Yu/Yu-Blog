@@ -1,6 +1,4 @@
-## Setting Up React E-commerce Project
-
-1. ### How to pull code from Others github and change ***origin***?
+ ## How to pull code from Others github and change ***origin***?
 #### 1). Repository tutor_react
 #### 2). Repository student_react
 - ### Target: Pull down the code from Repository Tutor and put the code into our own folder ```student_react```
@@ -12,5 +10,3 @@
 - 6) Now you need to let the name ```origin``` points to your own repository.
 - 7) ```git remote add origin git@github.com:Yueran-Yu/student_react.git``` Now the ```origin``` will point to your ```student_react``` repository in github.
 - 8) Important!!! After you pull down the code from others, you should run ```yarn install``` so that will download all of the packages related to your project.
-2. ### What is Router?
-3.

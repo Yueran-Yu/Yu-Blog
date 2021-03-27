@@ -71,7 +71,7 @@
   //delete the tail element
   array2.shift() // 3
   console.log(array2) //result: (2)[1, 2]
-
+// something has changed
 
   // delete middle elements
   let array3 = [1,2,3,4,5]

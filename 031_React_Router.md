@@ -40,6 +40,4 @@ If true the router will use full page refreshes on page navigation. You may want
     <BrowserRouter forceRefresh={true}>
 ```
 
-最近事情太多了，我胃不舒服
-
 

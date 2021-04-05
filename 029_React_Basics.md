@@ -215,7 +215,7 @@
     - ***What the senior developers have had this ability to think for themselves not just follow a tutorial but actually implement these things based on knowledge and experience that they've gathered.***
 
 20. ### The Benefit of using Arrow Function in JSX!!!
-    #### ```this``` keyword with arrow function points to the current class object ```NameForm``` . However, without arrow function, you should manually bind the methods to current class object ```NameForm```. Otherwise, ```this``` will point to global object ```window```.
+    #### ```this``` keyword with arrow function points to the current class object ```NameForm``` . However, without arrow function, you should manually bind the methods to current class object ```NameForm```. Otherwise, ```this``` will point to global object ```window```. Therefore, we can downsize the code by using arrow function.
     ```javascript
        // Code without Arrow function
         class NameForm extends React.Component {
@@ -223,6 +223,7 @@
             super(props);
             this.state = {value: ''};
 
+            // you need manually bind the methods to current class object
             this.handleChange = this.handleChange.bind(this);
             this.handleSubmit = this.handleSubmit.bind(this);
           }

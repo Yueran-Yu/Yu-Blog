@@ -223,7 +223,7 @@
             super(props);
             this.state = {value: ''};
 
-            // you need manually bind the methods to current class object
+            // you need to manually bind the methods to the current class object
             this.handleChange = this.handleChange.bind(this);
             this.handleSubmit = this.handleSubmit.bind(this);
           }

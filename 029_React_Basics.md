@@ -213,3 +213,70 @@
     - #### 3. What changes when state changes
     - ***This idea of deciding on components, deciding about the state and where it lists what happens when state changes because of user action. These all things that nobody is going  to tell you. These are things that is dependent on each app that you built.***
     - ***What the senior developers have had this ability to think for themselves not just follow a tutorial but actually implement these things based on knowledge and experience that they've gathered.***
+
+20. ### The Benefit of using Arrow Function in JSX!!!
+    #### ```this``` keyword with arrow function points to the current class object ```NameForm``` . However, without arrow function, you should manually bind the methods to current class object ```NameForm```. Otherwise, ```this``` will point to global object ```window```.
+    ```javascript
+       // Code without Arrow function
+        class NameForm extends React.Component {
+          constructor(props) {
+            super(props);
+            this.state = {value: ''};
+
+            this.handleChange = this.handleChange.bind(this);
+            this.handleSubmit = this.handleSubmit.bind(this);
+          }
+
+          handleChange(event) {
+            this.setState({value: event.target.value});
+          }
+
+          handleSubmit(event) {
+            alert('A name was submitted: ' + this.state.value);
+            event.preventDefault();
+          }
+
+          render() {
+            return (
+              <form onSubmit={this.handleSubmit}>
+                <label>
+                  Name:
+                  <input type="text" value={this.state.value} onChange={this.handleChange} />
+                </label>
+                <input type="submit" value="Submit" />
+              </form>
+            );
+          }
+        }
+    ```
+
+    ```javascript
+        // Code with Arrow function
+        class NameForm extends React.Component {
+          constructor(props) {
+            super(props);
+            this.state = {value: ''};
+          }
+
+          handleChange = event => {
+            this.setState({value: event.target.value});
+          }
+
+          handleSubmit = event => {
+            alert('A name was submitted: ' + this.state.value);
+            event.preventDefault();
+          }
+
+          render() {
+            return (
+              <form onSubmit={this.handleSubmit}>
+                <label>
+                  Name:
+                  <input type="text" value={this.state.value} onChange={this.handleChange} />
+                </label>
+                <input type="submit" value="Submit" />
+              </form>
+            );
+          }
+        }
+    ```

@@ -16,4 +16,5 @@
 **.get()**, **update()**, and **.delete()** respectively.
 - We can also add documents to collections using the collectionRef object using the **.add()** method. //collectionRef.add({//value:prop})
 - We get the snapshotObject from the referenceObject using the **.get()** method. ie. documentRef.get() or collectionRef.get()
--
+  - documentRef returns a **documentSnapshot** object.
+  - collectionRef returns a **querySnapshot** object.

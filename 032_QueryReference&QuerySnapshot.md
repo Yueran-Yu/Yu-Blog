@@ -18,3 +18,7 @@
 - We get the snapshotObject from the referenceObject using the **.get()** method. ie. documentRef.get() or collectionRef.get()
   - documentRef returns a **documentSnapshot** object.
   - collectionRef returns a **querySnapshot** object.
+
+## QueryReference
+   - CollectionReference - QuerySnapshot
+   - DocumentReference - DocumentSnapshot

@@ -7,3 +7,4 @@
   - Changes using pure functions
 
 <img src="imgs/Redux_Flow.png" width="600" alt="Redux  Flow">
+somhting

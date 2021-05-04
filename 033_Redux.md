@@ -54,3 +54,31 @@
       }
     }
   ```
+
+  ### 6. Reducers
+  - A reducer is a function that receives the current **state** and an **action** object, decides how to update the state if necessary, and returns the new state: **(state, action) => newState** You can think of a reducer as an event listener which handles events based on the received action (event) type.
+  - Reducers must always follow some specific rules:
+    - They should only calculate the new state value based on the **state** and **action** arguments.
+    - They are not allowed to modify the existing **state**. Instead, they must make immutable updates, by coping the existing **state** and making changes to the copied values.
+    - They must not do any asynchronous logic, calculate random values, or cause other "side effects"
+  - The logic inside reducer functions typically follows the same series of steps:
+    - Check to see if the reducer cares about this action
+      - If so, make a copy of the state, update the copy with new values, and return it.
+    - Otherwise, return of a reducer, showing the steps that each reducer should follow:
+
+  ```javascript
+    const initialState = {value: 0}
+    function counterReducer(state=initialState, action){
+      // check to see if the reducer cares about this action
+      if(action.type === 'counter/increment'){
+        // if so, make a copy of 'state'
+        return {
+          ...state,
+          // and update the copy with the new value
+          value: state.value +1
+        }
+      }
+      // otherwise return the existing state unchanged
+      return state
+    }
+  ```

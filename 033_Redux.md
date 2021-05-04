@@ -55,7 +55,7 @@
     }
   ```
 
-  ### 6. Reducers
+### 6. Reducers
   - A reducer is a function that receives the current **state** and an **action** object, decides how to update the state if necessary, and returns the new state: **(state, action) => newState** You can think of a reducer as an event listener which handles events based on the received action (event) type.
   - Reducers must always follow some specific rules:
     - They should only calculate the new state value based on the **state** and **action** arguments.
@@ -81,4 +81,40 @@
       // otherwise return the existing state unchanged
       return state
     }
+  ```
+
+
+- A redux reducer function is exactly the same idea as this "reduce callback" function!
+- We can say that Redux reducers reduce a set of actions (over time) into a single state.
+
+
+### 7. Store
+- The current Redux application ***state*** lives in an object called the *store*
+- The store is created by passing in a reducer, and has a method called **getState** that returns the current state value:
+```javascript
+   import {configureStore} from '@reduxjs/toolkit'
+   const store = configureStore({reducer: counterReducer })
+   console.log(store.getState())
+   // {value: 0}
+```
+
+### 8. Dispatch
+- The Redux store has a method called **dispatch**. The only way to update the state is to call **store.dispatch()** and pass in an action object. The store will run its reducer function and save the new state value inside, and we can call **getState()** to retrieve the updated value:
+```javascript
+  store.dispatch({type: 'counter/increment'})
+  console.log(store.getState())
+  // {value:1}
+```
+- You can think of dispatching actions as "triggering an event" in the application. Something happened, and we want the store to know about it. Reducers act like event listeners, and when they hear an action they are interested in, they update the state in response.
+- We typically call action creators to dispatch the right action:
+  ```javascript
+     const increment = () => {
+       return {
+         type: 'counter/increment'
+       }
+     }
+
+     store.dispatch(increment())
+     console.log(store.getState())
+     // {value: 2}
   ```

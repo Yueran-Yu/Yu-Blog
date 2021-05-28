@@ -1,3 +1,4 @@
+* [034 Extensible Code](034_Extensible_Code.md)
 * [033 Redux](033_Redux.md)
 * [032 QueryReference and QuerySnapshot](032_QueryReference&QuerySnapshot.md)
 * [031 React Router](031_React_Router.md)

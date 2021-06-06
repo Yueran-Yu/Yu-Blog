@@ -1,3 +1,4 @@
+* [035 Thinking About Data Flow](035_Thinking_About_Data_Flow.md)
 * [034 Extensible Code](034_Extensible_Code.md)
 * [033 Redux](033_Redux.md)
 * [032 QueryReference and QuerySnapshot](032_QueryReference&QuerySnapshot.md)

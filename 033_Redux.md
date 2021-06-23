@@ -30,8 +30,8 @@
       //copy obj  /overwrite a / copy obj.a / overwrite c
       ...obj,     a:{          ...obj.a,         c:42}
     }
-
 ```
+
 - Redux expects that all state updates are done immutably.
 
 ### 4. Actions

@@ -1,4 +1,4 @@
-## Thinking About Data Flow
+## 035 Thinking About Data Flow
 
 - Did you notice what yi did in the last video? He is doing something that a lot of senior developers do, and that is they think about their data flow. They don't just go ahead and start coding.
 - If it works the first time that;s great, they are done.

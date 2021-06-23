@@ -1,4 +1,4 @@
-## React Basics
+## 029 React Basics
 1. ### *package.json*
    -  ```"react-scripts":"3.0.0"``` =>  It allows use to have no worry about webpack and babble.
    - ```javascript

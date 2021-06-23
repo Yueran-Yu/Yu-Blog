@@ -1,4 +1,4 @@
-### QueryReference and QuerySnapshot
+## 032 QueryReference and QuerySnapshot
 - A query is a request we make to firestore to give us something from the database.
 - Firestore returns us two types of objects: references and snapshots. Of these objects, they can be either Document or Collection versions.
 - Firestore will **always** return us these objects, even if nothing exists at from that query.

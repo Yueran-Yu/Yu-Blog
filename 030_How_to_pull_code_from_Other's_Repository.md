@@ -1,4 +1,4 @@
-## How to pull code from Others github and change ***origin***?
+## 030 How to pull code from Others github and change ***origin***?
 #### 1). Repository tutor_react
 #### 2). Repository student_react
 - ### Target: Pull down the code from Repository Tutor and put the code into our own folder ```student_react```

@@ -1,3 +1,4 @@
+## 025 Loader and Plugins
 > Source: [Loader and plugin!](https://stackoverflow.com/questions/37452402/webpack-loaders-vs-plugins-whats-the-difference#:~:text=Loaders%20work%20at%20the%20individual,the%20bundles%20themselves%20are%20created.)
 >
 > Another Article: [Webpack Loaders and Plugins!](https://imranhsayed.medium.com/webpack-loaders-and-plugins-e13f79fe6b32)

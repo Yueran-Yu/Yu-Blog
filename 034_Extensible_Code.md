@@ -1,4 +1,4 @@
-### Extensible Code
+## 034 Extensible Code
 
 - #### Are you starting to feel like we're doing a lot of things over and over the same way we're creating reducers and actions and selectors and connecting components and rendering components and if things seem repetitive to you, that's actually a good thing because what we're doing is we're making things very simple.
 

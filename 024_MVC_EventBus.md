@@ -1,3 +1,4 @@
+## 024
 ## 1. What is MVC, give code example.
 > M: Model is used to store data and manipulate all the data.
 >
@@ -94,6 +95,6 @@ const c = {
 ```
 
 ## 4. How to understanding Module?
->The code forms a set of fixed templates, does not need the programmer to write code from scratch, can achieve most of the requirements of the work, rapid development becomes possible,
+> The code forms a set of fixed templates, does not need the programmer to write code from scratch, can achieve most of the requirements of the work, rapid development becomes possible,
 The cost is that the code sometimes doesn't use that much, it can be wasteful, or in very demanding cases, modularity can become a constraint
 

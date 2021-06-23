@@ -1,4 +1,4 @@
-## Three Ways of using Component
+## 028 Three Ways of using Component
 
 1. Using JS Object
 ```javascript

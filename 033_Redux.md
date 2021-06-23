@@ -1,5 +1,5 @@
 [Redux Tutorial Reference](https://redux.js.org/tutorials/essentials/part-1-overview-concepts)
-## Redux
+## 033 Redux
 - Good for managing large state
 - Useful for sharing data between components
 - Predictable state management using the 3 principles

@@ -4,7 +4,7 @@
 template 和 render 怎么用
 教读者如何用 codesandbox.io 写 Vue 代码 -->
 
-## Runtime + Compiler(Full) vs. Runtime-only
+## 026 Runtime + Compiler(Full) vs. Runtime-only
 
 >  |Vue|Runtime + Compiler(Full)| Runtime-Only |Comments|
 >  |:-----|:-----:|:--------:|:-----:|

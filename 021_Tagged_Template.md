@@ -1,5 +1,4 @@
-## [Back To Index Page](https://www.graceyutech.com/Yu-Blog/)
-## Tagged Template
+## 021 Tagged Template
 
 **Example 1**
 ```javascript

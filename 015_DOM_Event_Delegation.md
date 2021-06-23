@@ -1,5 +1,4 @@
-## [Back To Index Page](https://www.graceyutech.com/Yu-Blog/)
-## Bubbling & Capturing
+## 015 Bubbling & Capturing
 [Reference: What is event Bubbling and Capturing?](https://stackoverflow.com/questions/4616694/what-is-event-bubbling-and-capturing)
 
 > Event bubbling and capturing are two ways of event propagation in the HTML DOM API, when an event occurs in an element inside another element, and both elements have registered a handle for that event. The event propagation mode determines in which order the elements receive the event.

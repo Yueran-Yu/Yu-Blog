@@ -1,5 +1,4 @@
-## [Back To Index Page](https://www.graceyutech.com/Yu-Blog/)
-# Object
+## 008 Object
 - #### Definition:
   - Unordered data collection
   - Key-Value Pair collection

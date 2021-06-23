@@ -1,5 +1,4 @@
-## [Back To Index Page](https://www.graceyutech.com/Yu-Blog/)
-> ### BOOK RECOMMEND: <You Don't know: Javascript>
+## 007 BOOK RECOMMEND: <You Don't know: Javascript>
 > ### The difference between the code below:
 > ```javascript
 > 1.

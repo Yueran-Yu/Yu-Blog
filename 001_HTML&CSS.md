@@ -1,5 +1,4 @@
-## [Back To Index Page](https://www.graceyutech.com/Yu-Blog/)
-# HTML Practice
+# 001 HTML Practice
 ### shortcut to create the ul list
 1. select  many lines
 2. in the vscode，press 'command +shift + p' together

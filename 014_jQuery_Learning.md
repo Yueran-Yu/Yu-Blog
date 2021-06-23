@@ -1,5 +1,4 @@
-## [Back To Index Page](https://www.graceyutech.com/Yu-Blog/)
-## jQuery Learning
+## 014 jQuery Learning
 
 ### 1. jQuery - How to select elements
 > jQuery selectors are used to "find" (or select) HTML elements based on their name, id, classes, types, attributes, values and much more.

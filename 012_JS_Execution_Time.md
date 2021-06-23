@@ -1,5 +1,4 @@
-## [Back To Index Page](https://www.graceyutech.com/Yu-Blog/)
-### JS 函数的执行时机
+### 012 JS 函数的执行时机
 内容一百字以上，要求
 
 1. 解释为什么如下代码会打印 6 个 6

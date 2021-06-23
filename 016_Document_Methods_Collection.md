@@ -1,5 +1,4 @@
-## [Back To Index Page](https://www.graceyutech.com/Yu-Blog/)
-- ### importNode()
+### 016 importNode()
 > The Document object's ```importNode()``` method creates a copy of a Node or ```DocumentFragment``` from another document, to be inserted into the current document later. The imported node is not yet included in the document tree. To include it, you need to call an insertion method such as ```appendChild()``` or ```insertBefore``` with a node that is currently in the document tree.
 
 >'true' will render everything inside this template

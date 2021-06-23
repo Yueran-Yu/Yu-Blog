@@ -1,5 +1,5 @@
-## [Back To Index Page](https://www.graceyutech.com/Yu-Blog/)
-#### ★ You can Try To Find More Practice Materials Online~~~ For Example: Flexbox Froggy
+
+### 003 ★ You can Try To Find More Practice Materials Online~~~ For Example: Flexbox Froggy
 ## Layout
 1. The fixed width: the width always is 960/ 1000 / 1024 px
 2. Not Fixed Width: mainly depends on normal flow layout

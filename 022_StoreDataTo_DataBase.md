@@ -1,5 +1,4 @@
-## [Back To Index Page](https://www.graceyutech.com/Yu-Blog/)
-## Database Logic: Read Data and Write Data
+## 022 Database Logic: Read Data and Write Data
 
 ### /db/users.json
 #### Structure: An Array

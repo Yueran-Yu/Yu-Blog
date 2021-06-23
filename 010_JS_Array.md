@@ -1,5 +1,4 @@
-## [Back To Index Page](https://www.graceyutech.com/Yu-Blog/)
-# Array
+# 010 Array
 - ### Create an Array
 ```javascript
   let arr = [1,2,3]

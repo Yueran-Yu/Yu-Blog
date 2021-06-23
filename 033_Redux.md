@@ -19,7 +19,8 @@
 ### 3. Update values immutably
 - In order to update values immutably, your code must make copies of existing objects/arrays, and then modify the copies.
 - We can do this by hand using JavaScript's array / object spread operators, as well as array methods that return new copies of the array instead of mutating the original array:
-```javascript
+-
+```js
     const obj = {
       // To safely update obj.a.c, we have to copy each piece
       a: {c:3}, b:2

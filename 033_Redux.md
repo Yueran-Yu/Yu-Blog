@@ -22,6 +22,7 @@
 
 
 ```javascript
+
       const obj = {
         // To safely update obj.a.c, we have to copy each piece
         a: {c:3}, b:2

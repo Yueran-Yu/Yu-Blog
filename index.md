@@ -1,3 +1,4 @@
+* [036 The difference between JS, JSX, TS, TSX](036_The_difference_JS_JSX_TS_TSX.md)
 * [035 Thinking About Data Flow](035_Thinking_About_Data_Flow.md)
 * [034 Extensible Code](034_Extensible_Code.md)
 * [033 Redux](033_Redux.md)
